@@ -201,9 +201,12 @@ class CandidateMatch(BaseModel):
 
 
 class StepMappingResult(BaseModel):
+    model_config = {"extra": "allow"}
+
     step: int
     instruction: str
     mesh: str
+    parsed_instruction: Any = None
     semantic_name: Optional[str] = None
     confidence: float
     reason: List[str] = Field(default_factory=list)

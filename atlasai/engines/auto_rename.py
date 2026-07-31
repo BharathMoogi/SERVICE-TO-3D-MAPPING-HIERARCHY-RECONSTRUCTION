@@ -99,3 +99,7 @@ class MeshAutoRenameEngine:
 
         logger.info(f"Exported renamed_mapping.json: {path}")
         return path
+
+    def process_repository(self, repository: MeshRepository, mapping_results: List[MappingResult], output_path: Any) -> Path:
+        catalog = self.generate_renamed_mappings(mapping_results, repository)
+        return self.export_renamed_mapping_json(catalog, output_path)

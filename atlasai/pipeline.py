@@ -109,11 +109,8 @@ class AtlasPipeline:
             mapping_results.append(res)
 
         # Step 8: Generate Deliverables
-        self.output_gen.export_mapping(mapping_results, output_dir / "mapping.json")
-        self.output_gen.generate_visual_debugger_report(mapping_results, repository, output_dir / "mesh_report.json")
-        self.auto_rename.process_repository(repository, mapping_results, output_dir / "renamed_mapping.json")
+        self.output_gen.export_all_artifacts(mapping_results, repository, self.benchmark, output_dir)
         self.export_engine.export_all_deliverables(output_dir, mapping_results, entities, xref_list)
-        self.visual_report.generate_executive_report(mapping_results, repository, output_dir / "report.html")
 
         total_ms = self.benchmark.stop()
         self.benchmark.export_benchmark_json(output_dir / "benchmark.json")
