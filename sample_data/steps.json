@@ -1,0 +1,26 @@
+[
+  {
+    "step": 1,
+    "instruction": "Slide out the electronics drawer"
+  },
+  {
+    "step": 2,
+    "instruction": "Remove the bottom circuit board"
+  },
+  {
+    "step": 3,
+    "instruction": "Detach the sample clips"
+  },
+  {
+    "step": 4,
+    "instruction": "Remove mounting nuts"
+  },
+  {
+    "step": 5,
+    "instruction": "Disconnect objective lens barrel"
+  },
+  {
+    "step": 6,
+    "instruction": "Unbolt motor housing bracket"
+  }
+]

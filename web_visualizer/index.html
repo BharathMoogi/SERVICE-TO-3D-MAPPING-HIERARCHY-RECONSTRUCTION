@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtlasAI - Commercial AI Digital Twin Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Three.js, OrbitControls, and GLTFLoader CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Navbar -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00FFC8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="#00FFC8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="#00FFC8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Atlas<span>AI</span></h1>
+          <p class="tagline">Commercial AI Digital Twin Platform</p>
+        </div>
+      </div>
+
+      <div class="header-center-controls">
+        <button class="btn btn-demo" id="presentationModeBtn">
+          <span class="play-icon">▶</span> Presentation Mode (Auto-Demo)
+        </button>
+      </div>
+
+      <div class="header-badges">
+        <span class="badge enterprise">Metadome.ai Platform</span>
+        <span class="badge status"><span class="dot"></span> 250 Meshes Loaded</span>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="workspace">
+      <!-- Left Panel: Instruction Navigation & Graph -->
+      <aside class="sidebar instructions-panel">
+        <div class="panel-header">
+          <h2>Service Manual Steps</h2>
+          <span class="step-count" id="stepCountBadge">6 Steps</span>
+        </div>
+
+        <div class="search-bar-box">
+          <input type="text" id="instructionSearchInput" placeholder="Filter maintenance steps..." />
+        </div>
+
+        <div class="instruction-list" id="instructionList">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Download Export Center -->
+        <div class="export-center-box">
+          <h3>Deliverable Export Center</h3>
+          <div class="export-buttons-grid">
+            <a href="/api/mapping" download="mapping.json" class="btn btn-export">mapping.json</a>
+            <a href="/api/mesh-report" download="mesh_report.json" class="btn btn-export">mesh_report.json</a>
+            <a href="/api/mesh-graph" download="mesh_graph.json" class="btn btn-export">mesh_graph.json</a>
+            <a href="/api/renamed" download="renamed_mapping.json" class="btn btn-export">renamed_mapping.json</a>
+            <a href="/api/benchmark" download="benchmark.json" class="btn btn-export">benchmark.json</a>
+            <a href="/api/report.html" target="_blank" class="btn btn-export btn-highlight">report.html</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Center Viewport: 3D CAD Renderer -->
+      <section class="viewport-section">
+        <div class="viewport-header">
+          <div class="active-step-info">
+            <span class="step-indicator" id="activeStepIndicator">Step 1</span>
+            <h3 id="activeInstructionTitle">Slide out the electronics drawer</h3>
+          </div>
+          <div class="viewport-controls">
+            <button class="btn btn-secondary" id="resetViewBtn">Reset View</button>
+            <button class="btn btn-secondary" id="toggleWireframeBtn">Wireframe</button>
+          </div>
+        </div>
+
+        <div class="canvas-container" id="canvasContainer">
+          <canvas id="threeCanvas"></canvas>
+
+          <!-- Viewport CAD Legend Overlay -->
+          <div class="cad-legend-box">
+            <div class="legend-item"><span class="legend-dot green"></span> Selected Mesh</div>
+            <div class="legend-item"><span class="legend-dot blue"></span> Parent Assembly</div>
+            <div class="legend-item"><span class="legend-dot gray"></span> Remaining Scene</div>
+            <div class="legend-item"><span class="legend-dot red"></span> Rejected Candidate</div>
+            <div class="legend-item"><span class="legend-dot yellow"></span> Hovered Mesh</div>
+          </div>
+
+          <!-- AI Decision Scanning Status Overlay -->
+          <div class="ai-scanning-overlay" id="aiScanningOverlay">
+            <span class="scan-pulse-ring"></span>
+            <span class="scan-status-text" id="scanStatusText">AI Scanning CAD Assembly...</span>
+          </div>
+
+          <!-- Raycasting Hover Tooltip -->
+          <div class="hover-tooltip" id="hoverTooltip">
+            <div class="tooltip-header">
+              <span class="tooltip-title" id="ttMeshId">Mesh_143</span>
+              <span class="tooltip-badge" id="ttShape">Circuit Board</span>
+            </div>
+            <div class="tooltip-body">
+              <div class="tt-row"><span>Center:</span> <strong id="ttCenter">(0.00, 0.00, 0.28)</strong></div>
+              <div class="tt-row"><span>Dims:</span> <strong id="ttDims">0.80 x 0.60 x 0.02 m</strong></div>
+              <div class="tt-row"><span>Material:</span> <strong id="ttMaterial">standard_pbr</strong></div>
+              <div class="tt-desc" id="ttDesc">Flat PCB component near bottom drawer.</div>
+            </div>
+          </div>
+
+          <!-- Active Selection Banner Overlay -->
+          <div class="3d-overlay">
+            <div class="matched-badge">
+              <div class="badge-left">
+                <span class="target-label">MATCHED CAD NODE</span>
+                <h4 id="matchedMeshName">Mesh_032</h4>
+                <div class="renamed-title" id="renamedComponentTitle">➜ Electronics_Drawer</div>
+              </div>
+              <div class="badge-right">
+                <!-- Circular Confidence Meter -->
+                <div class="confidence-meter-container">
+                  <svg class="meter-svg" viewBox="0 0 36 36">
+                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill" id="meterCircleFill" stroke-dasharray="96, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="meter-percentage" id="meterPercentage">96%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Panel: Evidence Explainability & Candidate Comparison -->
+      <aside class="sidebar debugger-panel">
+        <div class="panel-header">
+          <h2>Explainability Engine</h2>
+          <span class="badge ai">Gemini AI</span>
+        </div>
+
+        <div class="debugger-content">
+          <!-- Stage 9: Reasoning Timeline Funnel -->
+          <div class="card timeline-card">
+            <h3>15-Stage Reasoning Timeline Funnel</h3>
+            <div class="timeline-funnel-list" id="timelineFunnelList">
+              <!-- Dynamically populated animated timeline steps -->
+            </div>
+          </div>
+
+          <!-- Feature 3: Evidence Based Explainability -->
+          <div class="card evidence-card">
+            <h3>Verified Evidence Chain</h3>
+            <div class="evidence-list" id="evidenceList">
+              <!-- Dynamically populated checkboxes -->
+            </div>
+          </div>
+
+          <!-- Feature 2: Candidate Comparison Matrix -->
+          <div class="card candidates-card">
+            <h3>Top 5 Candidate Comparison</h3>
+            <div class="candidate-table-wrapper">
+              <table class="candidate-matrix-table">
+                <thead>
+                  <tr>
+                    <th>Candidate</th>
+                    <th>Sim</th>
+                    <th>Score</th>
+                    <th>Status & Rejection Rationale</th>
+                  </tr>
+                </thead>
+                <tbody id="candidateMatrixBody">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Feature 8: Performance Analytics Panel -->
+          <div class="card metrics-card">
+            <h3>Pipeline Performance Analytics</h3>
+            <div class="metrics-grid" id="perfMetricsGrid">
+              <div class="metric-box">
+                <div class="metric-label">GLB LOAD TIME</div>
+                <div class="metric-val" id="mGlbTime">12.4 ms</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">VECTOR SEARCH</div>
+                <div class="metric-val" id="mSearchTime">4.2 ms</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">AI REASONING</div>
+                <div class="metric-val" id="mLlmTime">145 ms</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-label">TOTAL LATENCY</div>
+                <div class="metric-val" id="mTotalTime">180 ms</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>© 2026 Metadome.ai Hackathon | AtlasAI Commercial Digital Twin AI Platform</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

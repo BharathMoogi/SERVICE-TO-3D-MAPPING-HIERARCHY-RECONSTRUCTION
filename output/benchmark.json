@@ -1,0 +1,13 @@
+{
+  "system": "AtlasAI Intelligent Service-to-3D Mapping Engine",
+  "performance_metrics": {
+    "glb_loading_time_ms": 146.28,
+    "mesh_intelligence_time_ms": 3.71,
+    "embedding_indexing_time_ms": 12.73,
+    "candidate_search_time_ms": 0.0,
+    "llm_reasoning_time_ms": 1194.68,
+    "ranking_time_ms": 0.0,
+    "total_execution_time_ms": 1359.24
+  },
+  "timestamp_ms": 1785481694802
+}

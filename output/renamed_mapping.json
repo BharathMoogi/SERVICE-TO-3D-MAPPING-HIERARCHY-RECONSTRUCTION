@@ -1,0 +1,1689 @@
+[
+  {
+    "original_mesh_id": "Mesh_060",
+    "semantic_name": "Electronics_Drawer",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.12, y=-0.04, z=0.21)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_231",
+    "semantic_name": "Circuit_Board",
+    "geometric_shape": "large_flat_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A large flat plate object (located in the bottom assembly at position (x=0.00, y=0.00, z=0.10)). Dimensions are 1.50m x 1.20m x 0.20m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, plate_like, board_like, panel, circuit_board, large_flat_plate, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_004",
+    "semantic_name": "Sample_Clip",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.47, y=0.14, z=1.16)). Dimensions are 0.05m x 0.19m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_112",
+    "semantic_name": "Mounting_Nut",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A fastener nut object (located in the middle assembly at position (x=0.25, y=-0.30, z=1.20)). Dimensions are 0.06m x 0.08m x 0.08m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, middle_assembly, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_089",
+    "semantic_name": "Objective_Lens_Barrel",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=-0.35, y=0.29, z=1.01)). Dimensions are 0.03m x 0.03m x 0.11m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_018",
+    "semantic_name": "Motor_Housing_Bracket",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.22, y=0.15, z=0.51)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_001",
+    "semantic_name": "BottomAssembly_Bracket_Component",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.34, y=-0.02, z=0.16)). Dimensions are 0.03m x 0.06m x 0.08m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_002",
+    "semantic_name": "MiddleAssembly_Bracket_Component",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.50, y=0.39, z=0.92)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_003",
+    "semantic_name": "TopAssembly_Thin_Plate",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=-0.24, y=0.44, z=1.52)). Dimensions are 0.14m x 0.17m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_005",
+    "semantic_name": "BottomAssembly_Bracket_Component_2",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.21, y=0.48, z=0.40)). Dimensions are 0.08m x 0.09m x 0.02m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_006",
+    "semantic_name": "MiddleAssembly_Bracket_Component_2",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.02, y=-0.41, z=0.63)). Dimensions are 0.02m x 0.02m x 0.06m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_007",
+    "semantic_name": "BottomAssembly_Thin_Plate",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=-0.58, y=-0.02, z=0.42)). Dimensions are 0.10m x 0.17m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_008",
+    "semantic_name": "MiddleAssembly_Bracket_Component_3",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.34, y=-0.46, z=0.82)). Dimensions are 0.07m x 0.09m x 0.02m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_009",
+    "semantic_name": "TopAssembly_Fastener_Nut",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A fastener nut object (located in the top assembly at position (x=0.22, y=-0.10, z=1.56)). Dimensions are 0.08m x 0.07m x 0.08m. Material: standard_pbr_material. Semantic characteristics: screw, top_assembly, bolt, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_010",
+    "semantic_name": "TopAssembly_Bracket_Component",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.10, y=-0.23, z=1.30)). Dimensions are 0.04m x 0.06m x 0.02m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_011",
+    "semantic_name": "MiddleAssembly_Bracket_Component_4",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.13, y=-0.25, z=0.94)). Dimensions are 0.04m x 0.04m x 0.07m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_012",
+    "semantic_name": "MiddleAssembly_Thin_Plate",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.56, y=0.42, z=1.02)). Dimensions are 0.17m x 0.12m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_013",
+    "semantic_name": "MiddleAssembly_Thin_Plate_2",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.42, y=-0.05, z=0.90)). Dimensions are 0.02m x 0.02m x 0.17m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_014",
+    "semantic_name": "TopAssembly_Bracket_Component_2",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.56, y=-0.31, z=1.40)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_015",
+    "semantic_name": "MiddleAssembly_Bracket_Component_5",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.36, y=0.37, z=1.17)). Dimensions are 0.07m x 0.07m x 0.12m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_016",
+    "semantic_name": "TopAssembly_Thin_Plate_2",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=-0.12, y=-0.23, z=1.58)). Dimensions are 0.11m x 0.18m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_017",
+    "semantic_name": "MiddleAssembly_Bracket_Component_6",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.56, y=-0.47, z=1.20)). Dimensions are 0.09m x 0.09m x 0.18m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_019",
+    "semantic_name": "TopAssembly_Cylinder_Rod",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A cylinder rod object (located in the top assembly at position (x=0.43, y=0.03, z=1.34)). Dimensions are 0.04m x 0.04m x 0.18m. Material: standard_pbr_material. Semantic characteristics: top_assembly, shaft, cylindrical, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_020",
+    "semantic_name": "MiddleAssembly_Thin_Plate_3",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.32, y=0.18, z=0.77)). Dimensions are 0.09m x 0.20m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_021",
+    "semantic_name": "MiddleAssembly_Thin_Plate_4",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.18, y=0.09, z=0.68)). Dimensions are 0.06m x 0.17m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_022",
+    "semantic_name": "BottomAssembly_Fastener_Nut",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A fastener nut object (located in the bottom assembly at position (x=-0.18, y=0.12, z=0.17)). Dimensions are 0.09m x 0.10m x 0.10m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, bottom_assembly, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_023",
+    "semantic_name": "MiddleAssembly_Bracket_Component_7",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.40, y=0.27, z=1.16)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_024",
+    "semantic_name": "BottomAssembly_Thin_Plate_2",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=0.16, y=0.43, z=0.25)). Dimensions are 0.19m x 0.15m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_025",
+    "semantic_name": "MiddleAssembly_Bracket_Component_8",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.38, y=-0.37, z=0.53)). Dimensions are 0.05m x 0.11m x 0.02m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_026",
+    "semantic_name": "MiddleAssembly_Cylinder_Rod",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=0.14, y=0.48, z=1.05)). Dimensions are 0.04m x 0.04m x 0.15m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_027",
+    "semantic_name": "MiddleAssembly_Bracket_Component_9",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.49, y=-0.50, z=0.93)). Dimensions are 0.08m x 0.04m x 0.04m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_028",
+    "semantic_name": "MiddleAssembly_Bracket_Component_10",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.39, y=-0.37, z=0.60)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_029",
+    "semantic_name": "BottomAssembly_Bracket_Component_3",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.47, y=0.20, z=0.38)). Dimensions are 0.09m x 0.10m x 0.06m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_030",
+    "semantic_name": "TopAssembly_Thin_Plate_3",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=0.19, y=0.35, z=1.40)). Dimensions are 0.16m x 0.18m x 0.02m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_031",
+    "semantic_name": "MiddleAssembly_Bracket_Component_11",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.44, y=0.23, z=0.88)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_032",
+    "semantic_name": "MiddleAssembly_Bracket_Component_12",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.39, y=-0.15, z=1.12)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_033",
+    "semantic_name": "TopAssembly_Thin_Plate_4",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=-0.47, y=0.39, z=1.59)). Dimensions are 0.06m x 0.18m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_034",
+    "semantic_name": "MiddleAssembly_Bracket_Component_13",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.11, y=-0.13, z=0.49)). Dimensions are 0.08m x 0.06m x 0.03m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_035",
+    "semantic_name": "MiddleAssembly_Bracket_Component_14",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.42, y=-0.46, z=0.59)). Dimensions are 0.09m x 0.09m x 0.16m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_036",
+    "semantic_name": "TopAssembly_Bracket_Component_3",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.10, y=-0.41, z=1.42)). Dimensions are 0.09m x 0.07m x 0.02m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_037",
+    "semantic_name": "MiddleAssembly_Bracket_Component_15",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.60, y=0.40, z=0.80)). Dimensions are 0.07m x 0.08m x 0.02m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_038",
+    "semantic_name": "BottomAssembly_Cylinder_Rod",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A cylinder rod object (located in the bottom assembly at position (x=0.51, y=0.49, z=0.36)). Dimensions are 0.05m x 0.05m x 0.16m. Material: standard_pbr_material. Semantic characteristics: shaft, bottom_assembly, cylindrical, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_039",
+    "semantic_name": "TopAssembly_Bracket_Component_4",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=-0.56, y=0.46, z=1.34)). Dimensions are 0.08m x 0.07m x 0.04m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_040",
+    "semantic_name": "MiddleAssembly_Bracket_Component_16",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.18, y=0.11, z=0.87)). Dimensions are 0.04m x 0.04m x 0.08m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_041",
+    "semantic_name": "TopAssembly_Bracket_Component_5",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.12, y=0.40, z=1.58)). Dimensions are 0.08m x 0.03m x 0.05m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_042",
+    "semantic_name": "TopAssembly_Bracket_Component_6",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=-0.34, y=0.45, z=1.28)). Dimensions are 0.06m x 0.11m x 0.02m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_043",
+    "semantic_name": "TopAssembly_Bracket_Component_7",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.11, y=-0.22, z=1.47)). Dimensions are 0.02m x 0.03m x 0.05m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_044",
+    "semantic_name": "BottomAssembly_Thin_Plate_3",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=0.29, y=-0.26, z=0.27)). Dimensions are 0.10m x 0.09m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_045",
+    "semantic_name": "MiddleAssembly_Bracket_Component_17",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.12, y=-0.41, z=0.60)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_046",
+    "semantic_name": "MiddleAssembly_Bracket_Component_18",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.18, y=0.27, z=0.70)). Dimensions are 0.06m x 0.07m x 0.09m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_047",
+    "semantic_name": "MiddleAssembly_Bracket_Component_19",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.15, y=0.39, z=1.02)). Dimensions are 0.04m x 0.04m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_048",
+    "semantic_name": "MiddleAssembly_Bracket_Component_20",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.36, y=0.04, z=1.09)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_049",
+    "semantic_name": "BottomAssembly_Bracket_Component_4",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.19, y=0.22, z=0.20)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_050",
+    "semantic_name": "TopAssembly_Bracket_Component_8",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.07, y=-0.02, z=1.43)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_051",
+    "semantic_name": "MiddleAssembly_Bracket_Component_21",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.39, y=-0.46, z=0.99)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_052",
+    "semantic_name": "TopAssembly_Thin_Plate_5",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=-0.46, y=-0.08, z=1.29)). Dimensions are 0.16m x 0.06m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_053",
+    "semantic_name": "MiddleAssembly_Bracket_Component_22",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.56, y=0.20, z=0.55)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_054",
+    "semantic_name": "MiddleAssembly_Bracket_Component_23",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.60, y=0.06, z=0.81)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_055",
+    "semantic_name": "TopAssembly_Bracket_Component_9",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=-0.01, y=-0.28, z=1.58)). Dimensions are 0.10m x 0.02m x 0.08m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_056",
+    "semantic_name": "TopAssembly_Bracket_Component_10",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.27, y=0.14, z=1.57)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_057",
+    "semantic_name": "TopAssembly_Bracket_Component_11",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=-0.38, y=0.04, z=1.41)). Dimensions are 0.08m x 0.08m x 0.17m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_058",
+    "semantic_name": "MiddleAssembly_Bracket_Component_24",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.55, y=0.29, z=1.14)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_059",
+    "semantic_name": "MiddleAssembly_Bracket_Component_25",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.36, y=0.19, z=0.51)). Dimensions are 0.07m x 0.05m x 0.03m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_061",
+    "semantic_name": "BottomAssembly_Bracket_Component_5",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.33, y=-0.39, z=0.21)). Dimensions are 0.08m x 0.08m x 0.12m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_062",
+    "semantic_name": "BottomAssembly_Bracket_Component_6",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.42, y=0.46, z=0.33)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_063",
+    "semantic_name": "BottomAssembly_Bracket_Component_7",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.52, y=0.23, z=0.42)). Dimensions are 0.05m x 0.09m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_064",
+    "semantic_name": "MiddleAssembly_Bracket_Component_26",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.13, y=0.45, z=0.69)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_065",
+    "semantic_name": "MiddleAssembly_Bracket_Component_27",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.25, y=-0.14, z=1.18)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_066",
+    "semantic_name": "BottomAssembly_Thin_Plate_4",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=-0.18, y=0.46, z=0.38)). Dimensions are 0.06m x 0.17m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_067",
+    "semantic_name": "MiddleAssembly_Bracket_Component_28",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.39, y=0.41, z=0.73)). Dimensions are 0.05m x 0.05m x 0.13m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_068",
+    "semantic_name": "MiddleAssembly_Bracket_Component_29",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.43, y=-0.24, z=0.50)). Dimensions are 0.08m x 0.04m x 0.07m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_069",
+    "semantic_name": "MiddleAssembly_Bracket_Component_30",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.09, y=-0.23, z=0.93)). Dimensions are 0.07m x 0.09m x 0.04m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_070",
+    "semantic_name": "MiddleAssembly_Bracket_Component_31",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.22, y=0.32, z=0.89)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_071",
+    "semantic_name": "TopAssembly_Fastener_Nut_2",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A fastener nut object (located in the top assembly at position (x=-0.43, y=0.33, z=1.58)). Dimensions are 0.06m x 0.06m x 0.08m. Material: standard_pbr_material. Semantic characteristics: screw, top_assembly, bolt, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_072",
+    "semantic_name": "MiddleAssembly_Bracket_Component_32",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.02, y=0.01, z=1.21)). Dimensions are 0.08m x 0.08m x 0.11m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_073",
+    "semantic_name": "TopAssembly_Bracket_Component_12",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.32, y=-0.36, z=1.40)). Dimensions are 0.06m x 0.09m x 0.08m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_074",
+    "semantic_name": "MiddleAssembly_Bracket_Component_33",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.29, y=-0.12, z=0.99)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_075",
+    "semantic_name": "MiddleAssembly_Bracket_Component_34",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.45, y=0.14, z=1.16)). Dimensions are 0.09m x 0.09m x 0.14m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_076",
+    "semantic_name": "BottomAssembly_Bracket_Component_8",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.25, y=0.40, z=0.12)). Dimensions are 0.03m x 0.04m x 0.02m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_077",
+    "semantic_name": "TopAssembly_Thin_Plate_6",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=0.59, y=0.10, z=1.31)). Dimensions are 0.19m x 0.19m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_078",
+    "semantic_name": "BottomAssembly_Thin_Plate_5",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=-0.48, y=0.30, z=0.37)). Dimensions are 0.15m x 0.09m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_079",
+    "semantic_name": "MiddleAssembly_Bracket_Component_35",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.30, y=-0.30, z=0.86)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_080",
+    "semantic_name": "MiddleAssembly_Bracket_Component_36",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.57, y=-0.34, z=1.17)). Dimensions are 0.07m x 0.07m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_081",
+    "semantic_name": "MiddleAssembly_Bracket_Component_37",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.51, y=0.25, z=0.51)). Dimensions are 0.09m x 0.09m x 0.13m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_082",
+    "semantic_name": "MiddleAssembly_Bracket_Component_38",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.03, y=-0.06, z=0.70)). Dimensions are 0.06m x 0.03m x 0.03m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_083",
+    "semantic_name": "MiddleAssembly_Cylinder_Rod_2",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=-0.15, y=0.34, z=0.98)). Dimensions are 0.04m x 0.04m x 0.16m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_084",
+    "semantic_name": "BottomAssembly_Thin_Plate_6",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=-0.52, y=0.25, z=0.41)). Dimensions are 0.18m x 0.08m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_085",
+    "semantic_name": "TopAssembly_Thin_Plate_7",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=-0.05, y=0.06, z=1.39)). Dimensions are 0.13m x 0.08m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_086",
+    "semantic_name": "BottomAssembly_Fastener_Nut_2",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A fastener nut object (located in the bottom assembly at position (x=0.10, y=0.13, z=0.12)). Dimensions are 0.07m x 0.07m x 0.08m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, bottom_assembly, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_087",
+    "semantic_name": "MiddleAssembly_Thin_Plate_5",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.50, y=-0.25, z=0.97)). Dimensions are 0.07m x 0.06m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_088",
+    "semantic_name": "MiddleAssembly_Bracket_Component_39",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.50, y=-0.15, z=0.62)). Dimensions are 0.08m x 0.06m x 0.04m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_090",
+    "semantic_name": "MiddleAssembly_Fastener_Nut",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A fastener nut object (located in the middle assembly at position (x=0.44, y=0.02, z=0.99)). Dimensions are 0.05m x 0.05m x 0.06m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, middle_assembly, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_091",
+    "semantic_name": "MiddleAssembly_Bracket_Component_40",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.49, y=-0.38, z=0.45)). Dimensions are 0.03m x 0.03m x 0.09m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_092",
+    "semantic_name": "MiddleAssembly_Bracket_Component_41",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.09, y=0.11, z=0.74)). Dimensions are 0.08m x 0.08m x 0.19m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_093",
+    "semantic_name": "TopAssembly_Thin_Plate_8",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=0.11, y=-0.40, z=1.48)). Dimensions are 0.17m x 0.05m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_094",
+    "semantic_name": "MiddleAssembly_Bracket_Component_42",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.54, y=-0.35, z=0.98)). Dimensions are 0.06m x 0.07m x 0.02m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_095",
+    "semantic_name": "MiddleAssembly_Bracket_Component_43",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.39, y=0.46, z=0.61)). Dimensions are 0.04m x 0.04m x 0.11m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_096",
+    "semantic_name": "MiddleAssembly_Bracket_Component_44",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.23, y=0.04, z=0.48)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_097",
+    "semantic_name": "MiddleAssembly_Bracket_Component_45",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.05, y=-0.01, z=0.71)). Dimensions are 0.08m x 0.08m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_098",
+    "semantic_name": "MiddleAssembly_Bracket_Component_46",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.42, y=-0.37, z=0.70)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_099",
+    "semantic_name": "MiddleAssembly_Bracket_Component_47",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.31, y=-0.40, z=0.90)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_100",
+    "semantic_name": "BottomAssembly_Bracket_Component_9",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.30, y=0.24, z=0.15)). Dimensions are 0.07m x 0.07m x 0.16m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_101",
+    "semantic_name": "MiddleAssembly_Bracket_Component_48",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.01, y=0.24, z=0.96)). Dimensions are 0.10m x 0.10m x 0.16m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_102",
+    "semantic_name": "TopAssembly_Bracket_Component_13",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=-0.20, y=-0.36, z=1.29)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_103",
+    "semantic_name": "MiddleAssembly_Bracket_Component_49",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.05, y=-0.07, z=0.60)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_104",
+    "semantic_name": "TopAssembly_Bracket_Component_14",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=-0.14, y=0.04, z=1.46)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_105",
+    "semantic_name": "MiddleAssembly_Bracket_Component_50",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.48, y=0.12, z=0.91)). Dimensions are 0.06m x 0.07m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_106",
+    "semantic_name": "TopAssembly_Bracket_Component_15",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.30, y=0.30, z=1.34)). Dimensions are 0.03m x 0.03m x 0.09m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_107",
+    "semantic_name": "MiddleAssembly_Bracket_Component_51",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.38, y=-0.43, z=1.21)). Dimensions are 0.07m x 0.09m x 0.03m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_108",
+    "semantic_name": "MiddleAssembly_Bracket_Component_52",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.42, y=0.25, z=0.71)). Dimensions are 0.09m x 0.09m x 0.20m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_109",
+    "semantic_name": "MiddleAssembly_Bracket_Component_53",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.31, y=0.10, z=0.81)). Dimensions are 0.05m x 0.05m x 0.10m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_110",
+    "semantic_name": "BottomAssembly_Bracket_Component_10",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.06, y=0.05, z=0.40)). Dimensions are 0.07m x 0.03m x 0.03m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_111",
+    "semantic_name": "MiddleAssembly_Bracket_Component_54",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.10, y=-0.35, z=0.82)). Dimensions are 0.06m x 0.02m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_113",
+    "semantic_name": "MiddleAssembly_Bracket_Component_55",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.52, y=0.06, z=0.96)). Dimensions are 0.04m x 0.08m x 0.03m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_114",
+    "semantic_name": "BottomAssembly_Bracket_Component_11",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.09, y=0.42, z=0.11)). Dimensions are 0.10m x 0.06m x 0.08m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_115",
+    "semantic_name": "MiddleAssembly_Bracket_Component_56",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.50, y=0.02, z=0.72)). Dimensions are 0.10m x 0.10m x 0.07m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_116",
+    "semantic_name": "TopAssembly_Cylinder_Rod_2",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A cylinder rod object (located in the top assembly at position (x=-0.16, y=-0.01, z=1.38)). Dimensions are 0.03m x 0.08m x 0.02m. Material: standard_pbr_material. Semantic characteristics: top_assembly, shaft, cylindrical, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_117",
+    "semantic_name": "TopAssembly_Thin_Plate_9",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=0.08, y=-0.14, z=1.58)). Dimensions are 0.14m x 0.09m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_118",
+    "semantic_name": "MiddleAssembly_Bracket_Component_57",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.07, y=0.09, z=0.95)). Dimensions are 0.05m x 0.05m x 0.09m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_119",
+    "semantic_name": "MiddleAssembly_Cylinder_Rod_3",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=0.21, y=0.29, z=0.85)). Dimensions are 0.03m x 0.03m x 0.13m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_120",
+    "semantic_name": "BottomAssembly_Bracket_Component_12",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.08, y=0.34, z=0.23)). Dimensions are 0.06m x 0.04m x 0.05m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_121",
+    "semantic_name": "MiddleAssembly_Thin_Plate_6",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.47, y=-0.05, z=0.90)). Dimensions are 0.09m x 0.09m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_122",
+    "semantic_name": "MiddleAssembly_Bracket_Component_58",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.22, y=0.34, z=1.22)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_123",
+    "semantic_name": "MiddleAssembly_Bracket_Component_59",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.14, y=-0.13, z=0.79)). Dimensions are 0.08m x 0.02m x 0.04m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_124",
+    "semantic_name": "TopAssembly_Bracket_Component_16",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=-0.50, y=0.10, z=1.58)). Dimensions are 0.06m x 0.06m x 0.19m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_125",
+    "semantic_name": "MiddleAssembly_Bracket_Component_60",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.51, y=-0.44, z=0.52)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_126",
+    "semantic_name": "MiddleAssembly_Bracket_Component_61",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.21, y=-0.41, z=0.82)). Dimensions are 0.08m x 0.08m x 0.13m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_127",
+    "semantic_name": "MiddleAssembly_Bracket_Component_62",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.49, y=-0.38, z=0.79)). Dimensions are 0.04m x 0.05m x 0.06m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_128",
+    "semantic_name": "MiddleAssembly_Bracket_Component_63",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.39, y=-0.15, z=0.62)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_129",
+    "semantic_name": "MiddleAssembly_Thin_Plate_7",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.19, y=0.40, z=0.81)). Dimensions are 0.15m x 0.08m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_130",
+    "semantic_name": "BottomAssembly_Bracket_Component_13",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.12, y=0.20, z=0.37)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_131",
+    "semantic_name": "MiddleAssembly_Fastener_Nut_2",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A fastener nut object (located in the middle assembly at position (x=-0.21, y=0.13, z=0.46)). Dimensions are 0.03m x 0.03m x 0.03m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, middle_assembly, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_132",
+    "semantic_name": "MiddleAssembly_Bracket_Component_64",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.05, y=0.34, z=1.25)). Dimensions are 0.06m x 0.06m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_133",
+    "semantic_name": "MiddleAssembly_Bracket_Component_65",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.34, y=-0.10, z=1.03)). Dimensions are 0.09m x 0.09m x 0.19m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_134",
+    "semantic_name": "MiddleAssembly_Bracket_Component_66",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.13, y=0.14, z=0.93)). Dimensions are 0.03m x 0.08m x 0.06m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_135",
+    "semantic_name": "BottomAssembly_Bracket_Component_14",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.34, y=-0.36, z=0.12)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_136",
+    "semantic_name": "MiddleAssembly_Bracket_Component_67",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.10, y=0.28, z=1.06)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_137",
+    "semantic_name": "MiddleAssembly_Bracket_Component_68",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.42, y=0.05, z=0.94)). Dimensions are 0.09m x 0.05m x 0.03m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_138",
+    "semantic_name": "BottomAssembly_Thin_Plate_7",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=-0.54, y=-0.23, z=0.13)). Dimensions are 0.12m x 0.12m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_139",
+    "semantic_name": "MiddleAssembly_Cylinder_Rod_4",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=-0.45, y=0.45, z=1.01)). Dimensions are 0.04m x 0.04m x 0.15m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_140",
+    "semantic_name": "MiddleAssembly_Bracket_Component_69",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.50, y=0.09, z=1.19)). Dimensions are 0.08m x 0.05m x 0.04m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_141",
+    "semantic_name": "TopAssembly_Bracket_Component_17",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.44, y=0.31, z=1.60)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_142",
+    "semantic_name": "BottomAssembly_Bracket_Component_15",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.39, y=0.07, z=0.20)). Dimensions are 0.02m x 0.03m x 0.02m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_143",
+    "semantic_name": "TopAssembly_Thin_Plate_10",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=-0.15, y=0.31, z=1.58)). Dimensions are 0.07m x 0.14m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_144",
+    "semantic_name": "BottomAssembly_Thin_Plate_8",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=0.10, y=0.42, z=0.22)). Dimensions are 0.18m x 0.13m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_145",
+    "semantic_name": "TopAssembly_Bracket_Component_18",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.22, y=-0.34, z=1.47)). Dimensions are 0.09m x 0.09m x 0.19m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_146",
+    "semantic_name": "MiddleAssembly_Thin_Plate_8",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.17, y=-0.24, z=0.78)). Dimensions are 0.05m x 0.09m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_147",
+    "semantic_name": "MiddleAssembly_Bracket_Component_70",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.27, y=-0.31, z=0.80)). Dimensions are 0.05m x 0.05m x 0.14m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_148",
+    "semantic_name": "BottomAssembly_Bracket_Component_16",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.50, y=0.46, z=0.19)). Dimensions are 0.05m x 0.05m x 0.07m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_149",
+    "semantic_name": "MiddleAssembly_Bracket_Component_71",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.23, y=-0.05, z=1.04)). Dimensions are 0.07m x 0.07m x 0.19m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_150",
+    "semantic_name": "MiddleAssembly_Bracket_Component_72",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.51, y=0.42, z=0.48)). Dimensions are 0.08m x 0.03m x 0.03m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_151",
+    "semantic_name": "TopAssembly_Thin_Plate_11",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=0.56, y=-0.49, z=1.55)). Dimensions are 0.02m x 0.02m x 0.18m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_152",
+    "semantic_name": "MiddleAssembly_Bracket_Component_73",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.03, y=-0.42, z=0.89)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_153",
+    "semantic_name": "MiddleAssembly_Thin_Plate_9",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.46, y=-0.38, z=1.07)). Dimensions are 0.16m x 0.14m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_154",
+    "semantic_name": "MiddleAssembly_Bracket_Component_74",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.30, y=-0.09, z=0.96)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_155",
+    "semantic_name": "MiddleAssembly_Thin_Plate_10",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.50, y=0.28, z=0.94)). Dimensions are 0.11m x 0.19m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_156",
+    "semantic_name": "MiddleAssembly_Bracket_Component_75",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.49, y=0.09, z=0.63)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_157",
+    "semantic_name": "TopAssembly_Bracket_Component_19",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=-0.50, y=-0.42, z=1.58)). Dimensions are 0.05m x 0.05m x 0.09m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_158",
+    "semantic_name": "MiddleAssembly_Cylinder_Rod_5",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=0.41, y=-0.07, z=0.43)). Dimensions are 0.05m x 0.05m x 0.18m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_159",
+    "semantic_name": "TopAssembly_Cylinder_Rod_3",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A cylinder rod object (located in the top assembly at position (x=0.30, y=0.29, z=1.28)). Dimensions are 0.03m x 0.03m x 0.12m. Material: standard_pbr_material. Semantic characteristics: top_assembly, shaft, cylindrical, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_160",
+    "semantic_name": "BottomAssembly_Thin_Plate_9",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=-0.02, y=-0.01, z=0.22)). Dimensions are 0.06m x 0.14m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_161",
+    "semantic_name": "TopAssembly_Bracket_Component_20",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=-0.49, y=-0.18, z=1.53)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_162",
+    "semantic_name": "MiddleAssembly_Cylinder_Rod_6",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=-0.00, y=-0.11, z=0.55)). Dimensions are 0.03m x 0.02m x 0.10m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_163",
+    "semantic_name": "MiddleAssembly_Thin_Plate_11",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.43, y=-0.07, z=1.23)). Dimensions are 0.16m x 0.07m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_164",
+    "semantic_name": "MiddleAssembly_Bracket_Component_76",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.28, y=-0.37, z=0.48)). Dimensions are 0.07m x 0.07m x 0.18m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_165",
+    "semantic_name": "MiddleAssembly_Thin_Plate_12",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.28, y=0.30, z=0.52)). Dimensions are 0.08m x 0.16m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_166",
+    "semantic_name": "MiddleAssembly_Bracket_Component_77",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.19, y=-0.24, z=0.84)). Dimensions are 0.08m x 0.05m x 0.09m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_167",
+    "semantic_name": "BottomAssembly_Cylinder_Rod_2",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A cylinder rod object (located in the bottom assembly at position (x=-0.49, y=0.18, z=0.21)). Dimensions are 0.05m x 0.05m x 0.18m. Material: standard_pbr_material. Semantic characteristics: shaft, bottom_assembly, cylindrical, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_168",
+    "semantic_name": "MiddleAssembly_Bracket_Component_78",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.18, y=-0.29, z=0.51)). Dimensions are 0.04m x 0.04m x 0.11m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_169",
+    "semantic_name": "MiddleAssembly_Thin_Plate_13",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.13, y=0.14, z=0.79)). Dimensions are 0.13m x 0.19m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_170",
+    "semantic_name": "TopAssembly_Thin_Plate_12",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=0.14, y=0.44, z=1.52)). Dimensions are 0.18m x 0.15m x 0.02m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_171",
+    "semantic_name": "MiddleAssembly_Bracket_Component_79",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.00, y=0.36, z=1.09)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_172",
+    "semantic_name": "TopAssembly_Bracket_Component_21",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.18, y=-0.45, z=1.52)). Dimensions are 0.09m x 0.04m x 0.02m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_173",
+    "semantic_name": "MiddleAssembly_Bracket_Component_80",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.03, y=-0.40, z=0.84)). Dimensions are 0.06m x 0.06m x 0.08m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_174",
+    "semantic_name": "BottomAssembly_Cylinder_Rod_3",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A cylinder rod object (located in the bottom assembly at position (x=-0.19, y=-0.41, z=0.24)). Dimensions are 0.04m x 0.04m x 0.20m. Material: standard_pbr_material. Semantic characteristics: shaft, bottom_assembly, cylindrical, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_175",
+    "semantic_name": "MiddleAssembly_Bracket_Component_81",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.30, y=-0.14, z=1.24)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_176",
+    "semantic_name": "MiddleAssembly_Thin_Plate_14",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.52, y=0.14, z=0.88)). Dimensions are 0.15m x 0.12m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_177",
+    "semantic_name": "MiddleAssembly_Bracket_Component_82",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.39, y=-0.34, z=0.48)). Dimensions are 0.06m x 0.06m x 0.16m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_178",
+    "semantic_name": "BottomAssembly_Thin_Plate_10",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=0.29, y=-0.25, z=0.38)). Dimensions are 0.06m x 0.11m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_179",
+    "semantic_name": "MiddleAssembly_Thin_Plate_15",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.27, y=0.48, z=0.87)). Dimensions are 0.10m x 0.17m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_180",
+    "semantic_name": "TopAssembly_Thin_Plate_13",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=0.56, y=-0.04, z=1.36)). Dimensions are 0.08m x 0.11m x 0.02m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_181",
+    "semantic_name": "MiddleAssembly_Bracket_Component_83",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.45, y=0.02, z=1.25)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_182",
+    "semantic_name": "MiddleAssembly_Cylinder_Rod_7",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=0.41, y=0.36, z=0.48)). Dimensions are 0.02m x 0.02m x 0.10m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_183",
+    "semantic_name": "MiddleAssembly_Bracket_Component_84",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.56, y=-0.03, z=0.91)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_184",
+    "semantic_name": "TopAssembly_Thin_Plate_14",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=-0.12, y=-0.45, z=1.43)). Dimensions are 0.05m x 0.14m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_185",
+    "semantic_name": "MiddleAssembly_Bracket_Component_85",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.00, y=0.30, z=1.07)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_186",
+    "semantic_name": "BottomAssembly_Bracket_Component_17",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.29, y=0.11, z=0.22)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_187",
+    "semantic_name": "MiddleAssembly_Bracket_Component_86",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.29, y=0.20, z=1.15)). Dimensions are 0.05m x 0.04m x 0.08m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_188",
+    "semantic_name": "MiddleAssembly_Thin_Plate_16",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.52, y=-0.29, z=1.11)). Dimensions are 0.10m x 0.09m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_189",
+    "semantic_name": "MiddleAssembly_Bracket_Component_87",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.22, y=-0.33, z=0.94)). Dimensions are 0.09m x 0.09m x 0.15m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_190",
+    "semantic_name": "BottomAssembly_Bracket_Component_18",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.09, y=0.48, z=0.21)). Dimensions are 0.04m x 0.04m x 0.08m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_191",
+    "semantic_name": "MiddleAssembly_Bracket_Component_88",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.54, y=0.41, z=0.66)). Dimensions are 0.02m x 0.09m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_192",
+    "semantic_name": "TopAssembly_Bracket_Component_22",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.32, y=-0.46, z=1.59)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_193",
+    "semantic_name": "BottomAssembly_Fastener_Nut_3",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A fastener nut object (located in the bottom assembly at position (x=0.09, y=-0.01, z=0.39)). Dimensions are 0.08m x 0.08m x 0.09m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, bottom_assembly, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_194",
+    "semantic_name": "MiddleAssembly_Bracket_Component_89",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.11, y=0.48, z=0.83)). Dimensions are 0.09m x 0.05m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_195",
+    "semantic_name": "MiddleAssembly_Thin_Plate_17",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.42, y=0.16, z=0.95)). Dimensions are 0.06m x 0.11m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_196",
+    "semantic_name": "BottomAssembly_Thin_Plate_11",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=-0.48, y=0.16, z=0.11)). Dimensions are 0.07m x 0.13m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_197",
+    "semantic_name": "TopAssembly_Thin_Plate_15",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=0.47, y=0.35, z=1.50)). Dimensions are 0.17m x 0.15m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_198",
+    "semantic_name": "MiddleAssembly_Thin_Plate_18",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.16, y=-0.16, z=0.62)). Dimensions are 0.16m x 0.18m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_199",
+    "semantic_name": "MiddleAssembly_Bracket_Component_90",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.58, y=0.02, z=0.49)). Dimensions are 0.10m x 0.10m x 0.06m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_200",
+    "semantic_name": "TopAssembly_Cylinder_Rod_4",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A cylinder rod object (located in the top assembly at position (x=-0.46, y=0.42, z=1.42)). Dimensions are 0.04m x 0.04m x 0.15m. Material: standard_pbr_material. Semantic characteristics: top_assembly, shaft, cylindrical, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_201",
+    "semantic_name": "MiddleAssembly_Thin_Plate_19",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.48, y=0.44, z=0.70)). Dimensions are 0.13m x 0.18m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_202",
+    "semantic_name": "MiddleAssembly_Thin_Plate_20",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.55, y=0.09, z=1.12)). Dimensions are 0.05m x 0.13m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_203",
+    "semantic_name": "TopAssembly_Thin_Plate_16",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=0.58, y=-0.10, z=1.32)). Dimensions are 0.17m x 0.07m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_204",
+    "semantic_name": "MiddleAssembly_Bracket_Component_91",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.31, y=0.17, z=1.24)). Dimensions are 0.04m x 0.08m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_205",
+    "semantic_name": "MiddleAssembly_Bracket_Component_92",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.22, y=0.03, z=0.77)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_206",
+    "semantic_name": "MiddleAssembly_Bracket_Component_93",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.56, y=0.11, z=0.85)). Dimensions are 0.06m x 0.09m x 0.02m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_207",
+    "semantic_name": "MiddleAssembly_Fastener_Nut_3",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A fastener nut object (located in the middle assembly at position (x=-0.30, y=-0.25, z=1.14)). Dimensions are 0.08m x 0.08m x 0.07m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, middle_assembly, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_208",
+    "semantic_name": "MiddleAssembly_Bracket_Component_94",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.19, y=0.44, z=0.58)). Dimensions are 0.06m x 0.08m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_209",
+    "semantic_name": "BottomAssembly_Thin_Plate_12",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=-0.18, y=-0.20, z=0.35)). Dimensions are 0.13m x 0.12m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_210",
+    "semantic_name": "MiddleAssembly_Thin_Plate_21",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.37, y=0.40, z=0.58)). Dimensions are 0.07m x 0.08m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_211",
+    "semantic_name": "MiddleAssembly_Cylinder_Rod_8",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=-0.47, y=-0.04, z=0.43)). Dimensions are 0.05m x 0.05m x 0.18m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_212",
+    "semantic_name": "BottomAssembly_Bracket_Component_19",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.51, y=-0.21, z=0.34)). Dimensions are 0.09m x 0.09m x 0.17m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_213",
+    "semantic_name": "MiddleAssembly_Thin_Plate_22",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.47, y=-0.47, z=1.05)). Dimensions are 0.10m x 0.13m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_214",
+    "semantic_name": "BottomAssembly_Bracket_Component_20",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.55, y=0.21, z=0.27)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_215",
+    "semantic_name": "MiddleAssembly_Bracket_Component_95",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.31, y=0.06, z=1.26)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_216",
+    "semantic_name": "MiddleAssembly_Thin_Plate_23",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.20, y=0.09, z=0.51)). Dimensions are 0.13m x 0.11m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_217",
+    "semantic_name": "MiddleAssembly_Bracket_Component_96",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.46, y=0.36, z=1.03)). Dimensions are 0.05m x 0.03m x 0.04m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_218",
+    "semantic_name": "MiddleAssembly_Thin_Plate_24",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=-0.58, y=-0.30, z=1.17)). Dimensions are 0.17m x 0.14m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_219",
+    "semantic_name": "TopAssembly_Fastener_Nut_3",
+    "geometric_shape": "fastener_nut",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A fastener nut object (located in the top assembly at position (x=0.36, y=-0.43, z=1.58)). Dimensions are 0.08m x 0.08m x 0.08m. Material: standard_pbr_material. Semantic characteristics: screw, top_assembly, bolt, mounting_nut, fastener_nut, small_component, small_fastener."
+  },
+  {
+    "original_mesh_id": "Mesh_220",
+    "semantic_name": "MiddleAssembly_Thin_Plate_25",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.30, y=0.04, z=0.98)). Dimensions are 0.19m x 0.14m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_221",
+    "semantic_name": "BottomAssembly_Thin_Plate_13",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=0.12, y=0.42, z=0.23)). Dimensions are 0.08m x 0.06m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_222",
+    "semantic_name": "BottomAssembly_Bracket_Component_21",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.35, y=0.07, z=0.15)). Dimensions are 0.09m x 0.06m x 0.05m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_223",
+    "semantic_name": "TopAssembly_Thin_Plate_17",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A thin plate object (located in the top assembly at position (x=-0.01, y=-0.47, z=1.46)). Dimensions are 0.09m x 0.15m x 0.01m. Material: standard_pbr_material. Semantic characteristics: top_assembly, thin_plate, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_224",
+    "semantic_name": "BottomAssembly_Bracket_Component_22",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.08, y=-0.11, z=0.12)). Dimensions are 0.08m x 0.09m x 0.02m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_225",
+    "semantic_name": "MiddleAssembly_Bracket_Component_97",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.11, y=-0.45, z=1.01)). Dimensions are 0.08m x 0.06m x 0.02m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_226",
+    "semantic_name": "MiddleAssembly_Bracket_Component_98",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=-0.54, y=0.47, z=0.45)). Dimensions are 0.03m x 0.07m x 0.05m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_227",
+    "semantic_name": "MiddleAssembly_Cylinder_Rod_9",
+    "geometric_shape": "cylinder_rod",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A cylinder rod object (located in the middle assembly at position (x=-0.23, y=0.02, z=0.75)). Dimensions are 0.04m x 0.04m x 0.14m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column."
+  },
+  {
+    "original_mesh_id": "Mesh_228",
+    "semantic_name": "MiddleAssembly_Thin_Plate_26",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.18, y=-0.44, z=1.18)). Dimensions are 0.19m x 0.05m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_229",
+    "semantic_name": "BottomAssembly_Thin_Plate_14",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A thin plate object (located in the bottom assembly at position (x=0.59, y=-0.32, z=0.13)). Dimensions are 0.12m x 0.08m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_230",
+    "semantic_name": "MiddleAssembly_Large_Flat_Plate",
+    "geometric_shape": "large_flat_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A large flat plate object (located in the middle assembly at position (x=-0.40, y=0.00, z=0.95)). Dimensions are 0.20m x 0.20m x 1.50m. Material: standard_pbr_material. Semantic characteristics: plate_like, board_like, middle_assembly, panel, circuit_board, large_flat_plate, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_232",
+    "semantic_name": "BottomAssembly_Bracket_Component_23",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.59, y=-0.50, z=0.38)). Dimensions are 0.05m x 0.09m x 0.03m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_233",
+    "semantic_name": "MiddleAssembly_Thin_Plate_27",
+    "geometric_shape": "thin_plate",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A thin plate object (located in the middle assembly at position (x=0.40, y=-0.15, z=1.26)). Dimensions are 0.10m x 0.18m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat."
+  },
+  {
+    "original_mesh_id": "Mesh_234",
+    "semantic_name": "BottomAssembly_Bracket_Component_24",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.41, y=-0.34, z=0.19)). Dimensions are 0.09m x 0.09m x 0.14m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_235",
+    "semantic_name": "MiddleAssembly_Bracket_Component_99",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.36, y=-0.32, z=1.27)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_236",
+    "semantic_name": "BottomAssembly_Bracket_Component_25",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.60, y=-0.50, z=0.21)). Dimensions are 0.06m x 0.05m x 0.02m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_237",
+    "semantic_name": "BottomAssembly_Bracket_Component_26",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.60, y=-0.50, z=0.21)). Dimensions are 0.06m x 0.05m x 0.02m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_238",
+    "semantic_name": "BottomAssembly_Bracket_Component_27",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=-0.18, y=-0.38, z=0.31)). Dimensions are 0.08m x 0.08m x 0.14m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_239",
+    "semantic_name": "MiddleAssembly_Bracket_Component_100",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "middle_assembly",
+    "auto_description": "A bracket component object (located in the middle assembly at position (x=0.60, y=-0.44, z=1.21)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_240",
+    "semantic_name": "TopAssembly_Bracket_Component_23",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "top_assembly",
+    "auto_description": "A bracket component object (located in the top assembly at position (x=0.03, y=-0.14, z=1.42)). Dimensions are 0.05m x 0.09m x 0.06m. Material: standard_pbr_material. Semantic characteristics: top_assembly, mount, structural, bracket_component, bracket_like, connector."
+  },
+  {
+    "original_mesh_id": "Mesh_241",
+    "semantic_name": "BottomAssembly_Bracket_Component_28",
+    "geometric_shape": "bracket_component",
+    "spatial_zone": "bottom_assembly",
+    "auto_description": "A bracket component object (located in the bottom assembly at position (x=0.13, y=0.04, z=0.40)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector."
+  }
+]

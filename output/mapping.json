@@ -1,0 +1,601 @@
+[
+  {
+    "step": 1,
+    "instruction": "Slide out the electronics drawer",
+    "mesh": "Mesh_060",
+    "confidence": 0.6899,
+    "reason": [
+      "Located inside bottom assembly at (0.12, -0.04, 0.21)",
+      "Classified as 'bracket component' with volume 0.000006 m^3",
+      "Dense vector similarity score of 0.75 for 'electronics drawer'",
+      "Gemini LLM reasoning confidence evaluated at 61%"
+    ],
+    "top_candidates": [
+      {
+        "mesh_id": "Mesh_060",
+        "mesh_description": "A bracket component object (located in the bottom assembly at position (x=0.12, y=-0.04, z=0.21)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.7481,
+        "geometry_score": 0.1667,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.6898749999999999,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.75) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_005",
+        "mesh_description": "A bracket component object (located in the bottom assembly at position (x=-0.21, y=0.48, z=0.40)). Dimensions are 0.08m x 0.09m x 0.02m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.7466,
+        "geometry_score": 0.1667,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.689125,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.75) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_062",
+        "mesh_description": "A bracket component object (located in the bottom assembly at position (x=0.42, y=0.46, z=0.33)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.7462,
+        "geometry_score": 0.1667,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.6890000000000001,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.75) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_076",
+        "mesh_description": "A bracket component object (located in the bottom assembly at position (x=-0.25, y=0.40, z=0.12)). Dimensions are 0.03m x 0.04m x 0.02m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.7463,
+        "geometry_score": 0.1667,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.6890000000000001,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.75) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_063",
+        "mesh_description": "A bracket component object (located in the bottom assembly at position (x=0.52, y=0.23, z=0.42)). Dimensions are 0.05m x 0.09m x 0.01m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.7431,
+        "geometry_score": 0.1667,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.687625,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.74) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      }
+    ]
+  },
+  {
+    "step": 2,
+    "instruction": "Remove the bottom circuit board",
+    "mesh": "Mesh_231",
+    "confidence": 0.7475,
+    "reason": [
+      "Located inside bottom assembly at (0.00, 0.00, 0.10)",
+      "Classified as 'large flat plate' with volume 0.360000 m^3",
+      "Dense vector similarity score of 0.83 for 'bottom circuit board'",
+      "Gemini LLM reasoning confidence evaluated at 81%"
+    ],
+    "top_candidates": [
+      {
+        "mesh_id": "Mesh_231",
+        "mesh_description": "A large flat plate object (located in the bottom assembly at position (x=0.00, y=0.00, z=0.10)). Dimensions are 1.50m x 1.20m x 0.20m. Material: standard_pbr_material. Semantic characteristics: bottom_assembly, plate_like, board_like, panel, circuit_board, large_flat_plate, flat.",
+        "semantic_score": 0.8277,
+        "geometry_score": 0.5,
+        "spatial_score": 0.8706,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.81,
+        "final_confidence": 0.7475,
+        "reasoning_points": [
+          "Geometry matches expected 'large_flat_plate' profile.",
+          "Located in 'bottom assembly' as specified by instruction.",
+          "High semantic vector similarity (0.83) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_196",
+        "mesh_description": "A thin plate object (located in the bottom assembly at position (x=-0.48, y=0.16, z=0.11)). Dimensions are 0.07m x 0.13m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat.",
+        "semantic_score": 0.6185,
+        "geometry_score": 0.5,
+        "spatial_score": 0.8608,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.72,
+        "final_confidence": 0.6798,
+        "reasoning_points": [
+          "Geometry matches expected 'thin_plate' profile.",
+          "Located in 'bottom assembly' as specified by instruction.",
+          "High semantic vector similarity (0.62) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_005)."
+        ],
+        "rejection_reason": "Lower semantic correlation"
+      },
+      {
+        "mesh_id": "Mesh_229",
+        "mesh_description": "A thin plate object (located in the bottom assembly at position (x=0.59, y=-0.32, z=0.13)). Dimensions are 0.12m x 0.08m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat.",
+        "semantic_score": 0.619,
+        "geometry_score": 0.5,
+        "spatial_score": 0.8355,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.72,
+        "final_confidence": 0.6749,
+        "reasoning_points": [
+          "Geometry matches expected 'thin_plate' profile.",
+          "Located in 'bottom assembly' as specified by instruction.",
+          "High semantic vector similarity (0.62) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": "Lower semantic correlation"
+      },
+      {
+        "mesh_id": "Mesh_138",
+        "mesh_description": "A thin plate object (located in the bottom assembly at position (x=-0.54, y=-0.23, z=0.13)). Dimensions are 0.12m x 0.12m x 0.02m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat.",
+        "semantic_score": 0.6094,
+        "geometry_score": 0.5,
+        "spatial_score": 0.8275,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.71,
+        "final_confidence": 0.6694,
+        "reasoning_points": [
+          "Geometry matches expected 'thin_plate' profile.",
+          "Located in 'bottom assembly' as specified by instruction.",
+          "High semantic vector similarity (0.61) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_006)."
+        ],
+        "rejection_reason": "Lower semantic correlation"
+      },
+      {
+        "mesh_id": "Mesh_144",
+        "mesh_description": "A thin plate object (located in the bottom assembly at position (x=0.10, y=0.42, z=0.22)). Dimensions are 0.18m x 0.13m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, bottom_assembly, clip_like, sheet, bracket, flat.",
+        "semantic_score": 0.6209,
+        "geometry_score": 0.5,
+        "spatial_score": 0.71,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.69,
+        "final_confidence": 0.6457,
+        "reasoning_points": [
+          "Geometry matches expected 'thin_plate' profile.",
+          "Located in 'bottom assembly' as specified by instruction.",
+          "High semantic vector similarity (0.62) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": "Lower semantic correlation"
+      }
+    ]
+  },
+  {
+    "step": 3,
+    "instruction": "Detach the sample clips",
+    "mesh": "Mesh_004",
+    "confidence": 0.7899,
+    "reason": [
+      "Located inside middle assembly at (-0.47, 0.14, 1.16)",
+      "Classified as 'thin plate' with volume 0.000060 m^3",
+      "Dense vector similarity score of 0.75 for 'sample clips'",
+      "Gemini LLM reasoning confidence evaluated at 70%"
+    ],
+    "top_candidates": [
+      {
+        "mesh_id": "Mesh_004",
+        "mesh_description": "A thin plate object (located in the middle assembly at position (x=-0.47, y=0.14, z=1.16)). Dimensions are 0.05m x 0.19m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat.",
+        "semantic_score": 0.7525,
+        "geometry_score": 0.4286,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.7,
+        "final_confidence": 0.789875,
+        "reasoning_points": [
+          "Geometry matches expected 'thin_plate' profile.",
+          "High semantic vector similarity (0.75) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_002)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_087",
+        "mesh_description": "A thin plate object (located in the middle assembly at position (x=0.50, y=-0.25, z=0.97)). Dimensions are 0.07m x 0.06m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat.",
+        "semantic_score": 0.7505,
+        "geometry_score": 0.4286,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.69,
+        "final_confidence": 0.7889999999999999,
+        "reasoning_points": [
+          "Geometry matches expected 'thin_plate' profile.",
+          "High semantic vector similarity (0.75) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_006)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_021",
+        "mesh_description": "A thin plate object (located in the middle assembly at position (x=0.18, y=0.09, z=0.68)). Dimensions are 0.06m x 0.17m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat.",
+        "semantic_score": 0.7499,
+        "geometry_score": 0.4286,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.69,
+        "final_confidence": 0.7887500000000001,
+        "reasoning_points": [
+          "Geometry matches expected 'thin_plate' profile.",
+          "High semantic vector similarity (0.75) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_012",
+        "mesh_description": "A thin plate object (located in the middle assembly at position (x=-0.56, y=0.42, z=1.02)). Dimensions are 0.17m x 0.12m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat.",
+        "semantic_score": 0.746,
+        "geometry_score": 0.4286,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.69,
+        "final_confidence": 0.7871250000000001,
+        "reasoning_points": [
+          "Geometry matches expected 'thin_plate' profile.",
+          "High semantic vector similarity (0.75) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_002)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_020",
+        "mesh_description": "A thin plate object (located in the middle assembly at position (x=0.32, y=0.18, z=0.77)). Dimensions are 0.09m x 0.20m x 0.01m. Material: standard_pbr_material. Semantic characteristics: thin_plate, clip_like, sheet, middle_assembly, bracket, flat.",
+        "semantic_score": 0.7414,
+        "geometry_score": 0.4286,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.69,
+        "final_confidence": 0.785125,
+        "reasoning_points": [
+          "Geometry matches expected 'thin_plate' profile.",
+          "High semantic vector similarity (0.74) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      }
+    ]
+  },
+  {
+    "step": 4,
+    "instruction": "Remove mounting nuts",
+    "mesh": "Mesh_112",
+    "confidence": 0.7585,
+    "reason": [
+      "Located inside middle assembly at (0.25, -0.30, 1.20)",
+      "Classified as 'fastener nut' with volume 0.000389 m^3",
+      "Dense vector similarity score of 0.86 for 'mounting nuts'",
+      "Gemini LLM reasoning confidence evaluated at 83%"
+    ],
+    "top_candidates": [
+      {
+        "mesh_id": "Mesh_112",
+        "mesh_description": "A fastener nut object (located in the middle assembly at position (x=0.25, y=-0.30, z=1.20)). Dimensions are 0.06m x 0.08m x 0.08m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, middle_assembly, mounting_nut, fastener_nut, small_component, small_fastener.",
+        "semantic_score": 0.8616,
+        "geometry_score": 0.7143,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.83,
+        "final_confidence": 0.7585,
+        "reasoning_points": [
+          "Geometry matches expected 'fastener_nut' profile.",
+          "High semantic vector similarity (0.86) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_006)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_131",
+        "mesh_description": "A fastener nut object (located in the middle assembly at position (x=-0.21, y=0.13, z=0.46)). Dimensions are 0.03m x 0.03m x 0.03m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, middle_assembly, mounting_nut, fastener_nut, small_component, small_fastener.",
+        "semantic_score": 0.8608,
+        "geometry_score": 0.7143,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.83,
+        "final_confidence": 0.7583,
+        "reasoning_points": [
+          "Geometry matches expected 'fastener_nut' profile.",
+          "High semantic vector similarity (0.86) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_207",
+        "mesh_description": "A fastener nut object (located in the middle assembly at position (x=-0.30, y=-0.25, z=1.14)). Dimensions are 0.08m x 0.08m x 0.07m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, middle_assembly, mounting_nut, fastener_nut, small_component, small_fastener.",
+        "semantic_score": 0.8602,
+        "geometry_score": 0.7143,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.83,
+        "final_confidence": 0.7581,
+        "reasoning_points": [
+          "Geometry matches expected 'fastener_nut' profile.",
+          "High semantic vector similarity (0.86) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_002)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_090",
+        "mesh_description": "A fastener nut object (located in the middle assembly at position (x=0.44, y=0.02, z=0.99)). Dimensions are 0.05m x 0.05m x 0.06m. Material: standard_pbr_material. Semantic characteristics: screw, bolt, middle_assembly, mounting_nut, fastener_nut, small_component, small_fastener.",
+        "semantic_score": 0.8599,
+        "geometry_score": 0.7143,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.83,
+        "final_confidence": 0.758,
+        "reasoning_points": [
+          "Geometry matches expected 'fastener_nut' profile.",
+          "High semantic vector similarity (0.86) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_006)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_009",
+        "mesh_description": "A fastener nut object (located in the top assembly at position (x=0.22, y=-0.10, z=1.56)). Dimensions are 0.08m x 0.07m x 0.08m. Material: standard_pbr_material. Semantic characteristics: screw, top_assembly, bolt, mounting_nut, fastener_nut, small_component, small_fastener.",
+        "semantic_score": 0.8559,
+        "geometry_score": 0.7143,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.83,
+        "final_confidence": 0.7571,
+        "reasoning_points": [
+          "Geometry matches expected 'fastener_nut' profile.",
+          "High semantic vector similarity (0.86) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_003)."
+        ],
+        "rejection_reason": null
+      }
+    ]
+  },
+  {
+    "step": 5,
+    "instruction": "Disconnect objective lens barrel",
+    "mesh": "Mesh_089",
+    "confidence": 0.6897,
+    "reason": [
+      "Located inside middle assembly at (-0.35, 0.29, 1.01)",
+      "Classified as 'cylinder rod' with volume 0.000074 m^3",
+      "Dense vector similarity score of 0.72 for 'objective lens barrel'",
+      "Gemini LLM reasoning confidence evaluated at 61%"
+    ],
+    "top_candidates": [
+      {
+        "mesh_id": "Mesh_089",
+        "mesh_description": "A cylinder rod object (located in the middle assembly at position (x=-0.35, y=0.29, z=1.01)). Dimensions are 0.03m x 0.03m x 0.11m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column.",
+        "semantic_score": 0.7194,
+        "geometry_score": 0.2,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.68975,
+        "reasoning_points": [
+          "Geometry matches expected 'cylinder_rod' profile.",
+          "High semantic vector similarity (0.72) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_002)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_119",
+        "mesh_description": "A cylinder rod object (located in the middle assembly at position (x=0.21, y=0.29, z=0.85)). Dimensions are 0.03m x 0.03m x 0.13m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column.",
+        "semantic_score": 0.7181,
+        "geometry_score": 0.2,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.689125,
+        "reasoning_points": [
+          "Geometry matches expected 'cylinder_rod' profile.",
+          "High semantic vector similarity (0.72) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_211",
+        "mesh_description": "A cylinder rod object (located in the middle assembly at position (x=-0.47, y=-0.04, z=0.43)). Dimensions are 0.05m x 0.05m x 0.18m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column.",
+        "semantic_score": 0.7177,
+        "geometry_score": 0.2,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.6890000000000001,
+        "reasoning_points": [
+          "Geometry matches expected 'cylinder_rod' profile.",
+          "High semantic vector similarity (0.72) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_002)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_162",
+        "mesh_description": "A cylinder rod object (located in the middle assembly at position (x=-0.00, y=-0.11, z=0.55)). Dimensions are 0.03m x 0.02m x 0.10m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column.",
+        "semantic_score": 0.7169,
+        "geometry_score": 0.2,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.6886249999999999,
+        "reasoning_points": [
+          "Geometry matches expected 'cylinder_rod' profile.",
+          "High semantic vector similarity (0.72) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_158",
+        "mesh_description": "A cylinder rod object (located in the middle assembly at position (x=0.41, y=-0.07, z=0.43)). Dimensions are 0.05m x 0.05m x 0.18m. Material: standard_pbr_material. Semantic characteristics: shaft, cylindrical, middle_assembly, tube, rod, cylinder_rod, round_component, column.",
+        "semantic_score": 0.7162,
+        "geometry_score": 0.2,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.61,
+        "final_confidence": 0.688375,
+        "reasoning_points": [
+          "Geometry matches expected 'cylinder_rod' profile.",
+          "High semantic vector similarity (0.72) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      }
+    ]
+  },
+  {
+    "step": 6,
+    "instruction": "Unbolt motor housing bracket",
+    "mesh": "Mesh_018",
+    "confidence": 0.6073,
+    "reason": [
+      "Located inside middle assembly at (0.22, 0.15, 0.51)",
+      "Classified as 'bracket component' with volume 0.000006 m^3",
+      "Dense vector similarity score of 0.70 for 'motor housing bracket'",
+      "Gemini LLM reasoning confidence evaluated at 53%"
+    ],
+    "top_candidates": [
+      {
+        "mesh_id": "Mesh_018",
+        "mesh_description": "A bracket component object (located in the middle assembly at position (x=0.22, y=0.15, z=0.51)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.7023,
+        "geometry_score": 0.0,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.53,
+        "final_confidence": 0.6072500000000001,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.70) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_008",
+        "mesh_description": "A bracket component object (located in the middle assembly at position (x=0.34, y=-0.46, z=0.82)). Dimensions are 0.07m x 0.09m x 0.02m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.7004,
+        "geometry_score": 0.0,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.53,
+        "final_confidence": 0.606375,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.70) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_001)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_002",
+        "mesh_description": "A bracket component object (located in the middle assembly at position (x=-0.50, y=0.39, z=0.92)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.6995,
+        "geometry_score": 0.0,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.53,
+        "final_confidence": 0.606,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.70) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_003)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_023",
+        "mesh_description": "A bracket component object (located in the middle assembly at position (x=-0.40, y=0.27, z=1.16)). Dimensions are 0.03m x 0.03m x 0.01m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.6983,
+        "geometry_score": 0.0,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.53,
+        "final_confidence": 0.6055,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.70) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_002)."
+        ],
+        "rejection_reason": null
+      },
+      {
+        "mesh_id": "Mesh_017",
+        "mesh_description": "A bracket component object (located in the middle assembly at position (x=0.56, y=-0.47, z=1.20)). Dimensions are 0.09m x 0.09m x 0.18m. Material: standard_pbr_material. Semantic characteristics: middle_assembly, mount, structural, bracket_component, bracket_like, connector.",
+        "semantic_score": 0.6874,
+        "geometry_score": 0.0,
+        "spatial_score": 0.6,
+        "graph_score": 0.8,
+        "hierarchy_score": 0.0,
+        "llm_score": 0.53,
+        "final_confidence": 0.60075,
+        "reasoning_points": [
+          "Geometry matches expected 'bracket_component' profile.",
+          "High semantic vector similarity (0.69) to instruction keywords.",
+          "Positioned adjacent to sub-assembly components (Mesh_006)."
+        ],
+        "rejection_reason": null
+      }
+    ]
+  }
+]
