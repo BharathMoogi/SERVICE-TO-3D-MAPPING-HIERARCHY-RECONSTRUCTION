@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtlasAI — Automotive Digital Twin Platform</title>
+  <meta name="description" content="AI-powered Car Digital Twin with intelligent part search, 3D navigation, geometry-based part matching, and engineering intelligence. BMW / Mercedes-Benz grade.">
+  <link rel="stylesheet" href="car.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+</head>
+<body>
+
+<!-- Full-screen 3D canvas -->
+<canvas id="car-canvas"></canvas>
+
+<!-- Corner decorations -->
+<div class="c-dec tl"></div><div class="c-dec tr"></div>
+<div class="c-dec bl"></div><div class="c-dec br"></div>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════════ -->
+<header class="car-header">
+  <div class="h-brand">
+    <svg class="h-logo" viewBox="0 0 34 34" fill="none">
+      <circle cx="17" cy="17" r="16" stroke="#C9A84C" stroke-width="1.2" opacity=".4"/>
+      <polygon points="17,5 27,23 7,23" fill="none" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/>
+      <circle cx="17" cy="17" r="3.2" fill="#C9A84C" opacity=".85"/>
+      <line x1="17" y1="5" x2="17" y2="13.8" stroke="#00B4FF" stroke-width=".9" opacity=".7"/>
+    </svg>
+    <div class="h-titles">
+      <div class="h-title">AtlasAI</div>
+      <div class="h-sub">Automotive Digital Twin</div>
+    </div>
+  </div>
+
+  <div class="h-div"></div>
+
+  <div class="vin-info">
+    <span class="vin-lbl">VIN</span>
+    <span class="vin-val">WBS8M9C57H5G78412</span>
+    <span class="vin-lbl" style="margin-left:8px">MODEL</span>
+    <span class="vin-val">BMW M4 Competition G82 2024</span>
+  </div>
+
+  <div class="h-div"></div>
+
+  <div class="g-search-wrap">
+    <span class="g-search-icon">🔍</span>
+    <input type="text" id="carSearch" class="g-search" autocomplete="off"
+      placeholder="Search part, assembly, NL query... ('turbo', 'front left brake', 'show engine')">
+    <span class="g-search-kbd">⌘K</span>
+    <div class="search-dd" id="searchDd"></div>
+  </div>
+
+  <div class="h-actions">
+    <button class="btn-hdr" id="openUpload">⬆ Upload Part</button>
+    <a href="/" class="btn-hdr">🔬 Microscope</a>
+    <div class="live-badge"><span class="live-dot"></span>LIVE</div>
+  </div>
+</header>
+
+<!-- ═══ LEFT PANEL — Parts Index ════════════════════════════════ -->
+<aside class="panel-l">
+  <div class="pl-header">
+    <span class="pl-title">Parts Index</span>
+    <span class="pl-badge" id="partsBadge">-- Parts</span>
+  </div>
+  <div class="parts-scroll" id="partsList"></div>
+</aside>
+
+<!-- ═══ RIGHT PANEL — Part Information ══════════════════════════ -->
+<aside class="panel-r hidden" id="panelR">
+  <!-- No-selection placeholder -->
+  <div class="no-sel" id="noSel">
+    <div class="no-sel-icon">🚗</div>
+    <div class="no-sel-title">No Part Selected</div>
+    <div class="no-sel-desc">Search, click a mesh in the 3D model, or upload a part file to begin AI analysis.</div>
+  </div>
+
+  <!-- Part info (shown on selection) -->
+  <div id="partInfo" style="display:none;flex-direction:column;height:100%">
+    <div class="pi-head">
+      <div class="pi-pnum" id="piNum">PART-000</div>
+      <div class="pi-name-big" id="piName">Component</div>
+      <div class="pi-asm" id="piAsm">📍 Assembly</div>
+      <div class="pi-health-row">
+        <span class="hbadge ok" id="piHbadge">OPERATIONAL</span>
+        <div class="conf-bar"><div class="conf-fill" id="piConf" style="width:0%"></div></div>
+        <span class="conf-pct" id="piConfPct">0%</span>
+      </div>
+    </div>
+
+    <div class="pi-tabs">
+      <div class="pi-tab active" data-tab="specs">Specs</div>
+      <div class="pi-tab" data-tab="service">Service</div>
+      <div class="pi-tab" data-tab="maint">Maint.</div>
+      <div class="pi-tab" data-tab="ai">AI</div>
+    </div>
+
+    <div class="pi-body">
+      <!-- Specs -->
+      <div class="tab-pane active" id="tab-specs">
+        <div class="spec-sec" id="piSpecs"></div>
+        <div class="hier-chain" id="piHier"></div>
+        <div class="related-grid" id="piRelated"></div>
+      </div>
+      <!-- Service -->
+      <div class="tab-pane" id="tab-service">
+        <div class="svc-list" id="piSvc"></div>
+      </div>
+      <!-- Maintenance -->
+      <div class="tab-pane" id="tab-maint">
+        <div id="piMaint"></div>
+      </div>
+      <!-- AI -->
+      <div class="tab-pane" id="tab-ai">
+        <div class="ai-box" id="piAi"></div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ═══ VIEWER OVERLAYS ══════════════════════════════════════════ -->
+<!-- AI Scanning indicator -->
+<div class="ai-scan" id="aiScan">
+  <div class="scan-ring"></div>
+  <div class="scan-txt" id="scanTxt">INITIALIZING AI ENGINE...</div>
+</div>
+
+<!-- Hover tooltip -->
+<div class="h-tooltip" id="hoverTip">
+  <div class="ht-id"   id="htId">mesh_id</div>
+  <div class="ht-name" id="htName">Part Name</div>
+  <div class="ht-asm"  id="htAsm">Assembly</div>
+</div>
+
+<!-- Viewer control buttons -->
+<div class="v-controls">
+  <button class="v-btn" id="vReset">⟳ Reset</button>
+  <button class="v-btn" id="vWire">▦ Wire</button>
+  <button class="v-btn" id="vXray">◈ X-Ray</button>
+  <button class="v-btn" id="vExplode">⊕ Explode</button>
+</div>
+
+<!-- CAD Legend -->
+<div class="cad-legend">
+  <div class="leg-item"><div class="leg-dot" style="background:#C9A84C;box-shadow:0 0 5px #C9A84C"></div>Selected Part</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#00B4FF;box-shadow:0 0 5px #00B4FF"></div>Parent Assembly</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#334155"></div>Remaining Model</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#EF4444"></div>Rejected Candidate</div>
+</div>
+
+<!-- Match Toast -->
+<div class="match-toast" id="matchToast">
+  <div class="toast-ico">✓</div>
+  <div>
+    <div class="toast-title" id="toastTitle">Part Matched</div>
+    <div class="toast-sub"   id="toastSub">Confidence: 98.4%</div>
+  </div>
+</div>
+
+<!-- ═══ UPLOAD MODAL ═════════════════════════════════════════════ -->
+<div class="upload-overlay" id="uploadOverlay">
+  <div class="upload-box">
+    <div class="upload-title">Upload Part for AI Matching</div>
+    <div class="upload-sub">Upload a 3D model of a car component — AtlasAI identifies it in the Digital Twin using geometry-based AI matching.</div>
+
+    <div class="drop-zone" id="dropZone">
+      <input type="file" id="fileInput" accept=".glb,.gltf,.obj,.stl">
+      <div class="drop-icon">🧩</div>
+      <div class="drop-title">Drag & Drop Part Model Here</div>
+      <div class="drop-sub">or click to browse files</div>
+      <div class="drop-fmts">
+        <span class="fmt-chip">GLB</span><span class="fmt-chip">GLTF</span>
+        <span class="fmt-chip">OBJ</span><span class="fmt-chip">STL</span>
+      </div>
+    </div>
+
+    <div class="upload-progress" id="uploadProg">
+      <div class="up-bar"><div class="up-fill" id="upFill"></div></div>
+      <div class="up-txt" id="upTxt">Analyzing geometry...</div>
+    </div>
+
+    <div class="upload-actions">
+      <button class="btn-cancel" id="closeUpload">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ STATUS BAR ═══════════════════════════════════════════════ -->
+<div class="status-bar">
+  <div class="s-item"><span class="s-dot g"></span>AtlasAI v2.0</div>
+  <div class="s-item gold" id="sbParts">-- Parts Indexed</div>
+  <div class="s-item" id="sbSel">No Selection</div>
+  <div class="s-item blue"><span class="s-dot gold"></span>AI Engine Ready</div>
+  <div class="s-item">BMW M4 Competition 2024</div>
+  <div class="s-right">
+    <div class="s-item"><span class="s-dot g"></span>FPS: <span id="fps">60</span></div>
+    <div class="s-item">WebGL 2.0 · Three.js r128</div>
+  </div>
+</div>
+
+<script src="car.js"></script>
+</body>
+</html>
