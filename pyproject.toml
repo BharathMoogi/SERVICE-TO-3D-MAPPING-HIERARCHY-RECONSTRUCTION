@@ -21,6 +21,10 @@ dependencies = [
     "jinja2>=3.1.0"
 ]
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["atlasai*"]
+
 [project.scripts]
 atlasai = "atlasai.cli:main"
 
