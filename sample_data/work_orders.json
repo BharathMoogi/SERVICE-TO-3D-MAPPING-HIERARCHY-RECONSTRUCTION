@@ -1,0 +1,32 @@
+[
+  {
+    "work_order_id": "WO-7741",
+    "component_name": "Electronics Drawer",
+    "mesh_id": "Mesh_032",
+    "issue_description": "Drawer guide rail binding reported during annual maintenance.",
+    "status": "Closed",
+    "technician": "Sarah Jenkins",
+    "replacement_part": "EL-DRW-900",
+    "service_date": "2026-03-15"
+  },
+  {
+    "work_order_id": "WO-8820",
+    "component_name": "Main Circuit Board",
+    "mesh_id": "Mesh_231",
+    "issue_description": "FPGA power rail voltage fluctuation causing intermittent motor reset.",
+    "status": "Open",
+    "technician": "Alex Rivera",
+    "replacement_part": "PCB-MAIN-880",
+    "service_date": "2026-07-20"
+  },
+  {
+    "work_order_id": "WO-9012",
+    "component_name": "Sample Clips",
+    "mesh_id": "Mesh_004",
+    "issue_description": "Tension spring fatigue on left sample clip.",
+    "status": "Closed",
+    "technician": "Michael Chen",
+    "replacement_part": "CLP-SMP-104",
+    "service_date": "2026-05-10"
+  }
+]

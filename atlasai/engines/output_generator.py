@@ -187,3 +187,6 @@ class OutputGenerator:
             f.write(content)
 
         return path
+
+# Backward compatibility alias
+OutputGeneratorEngine = OutputGenerator

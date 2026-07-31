@@ -1,7 +1,7 @@
 /**
- * AtlasAI Enterprise 3D Digital Twin CAD Highlighting & AI Decision Engine App
- * Siemens NX / Autodesk Forge grade 3D visual states, Smart Camera Flight (800ms),
- * X-Ray Occlusion Handling, 1.5s Emissive Pulse, Viewport Legend & AI Decision Animation.
+ * AtlasAI Commercial 3D Digital Twin Platform - App Engine
+ * Siemens NX / Autodesk Forge grade CAD Highlighting, 800ms Smart Camera Flight,
+ * Interactive Part Information Side Drawer, Raycasting Mesh Click & Global Search.
  */
 
 let scene, camera, renderer, controls, raycaster, mouse;
@@ -13,7 +13,7 @@ let isPresentationRunning = false;
 // State Data
 let mappingData = [];
 let renamedData = {};
-let benchmarkData = {};
+let partsXrefData = [];
 let activeStepIndex = 0;
 let hoveredMesh = null;
 let activeSelectedMesh = null;
@@ -46,7 +46,7 @@ const CAD_MATERIALS = {
     opacity: 0.40
   }),
   remaining: new THREE.MeshStandardMaterial({
-    color: 0x2A2A2A,     // Dark Gray
+    color: 0x2A2A2A,     // Neutral Dark Gray
     metalness: 0.1,
     roughness: 0.9,
     transparent: true,
@@ -64,12 +64,6 @@ const CAD_MATERIALS = {
     transparent: true,
     opacity: 0.10,
     wireframe: true
-  }),
-  hovered: new THREE.MeshStandardMaterial({
-    color: 0xFFD700,     // Gold Yellow
-    emissive: 0x443300,
-    transparent: false,
-    opacity: 0.9
   })
 };
 
@@ -77,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initThreeJS();
   loadBackendData();
   setupEventListeners();
+  setupGlobalSearch();
 });
 
 function initThreeJS() {
@@ -119,7 +114,7 @@ function initThreeJS() {
 
   loadGLBModel();
 
-  // Animation Loop (60 FPS with 1.5s Pulse & 800ms Camera Flight)
+  // Animation Loop (60 FPS with 1.5s Emissive Pulse & 800ms Camera Flight)
   let lastTime = performance.now();
   function animate(now) {
     requestAnimationFrame(animate);
@@ -128,19 +123,17 @@ function initThreeJS() {
 
     // 1. 1.5s Emissive Pulse Animation for Selected Emerald Mesh
     if (activeSelectedMesh && activeSelectedMesh.material) {
-      const pulse = Math.sin(now * 0.004188) * 0.3 + 0.7; // 1.5s cycle (2*PI / 1500ms)
+      const pulse = Math.sin(now * 0.004188) * 0.3 + 0.7; // 1.5s cycle
       activeSelectedMesh.material.emissive.setHSL(0.44, 1.0, 0.25 * pulse);
     }
 
     // 2. 800ms Camera Flight Lerp Interpolation
     if (isCameraAnimating) {
-      animProgress += delta / 0.8; // 800ms duration
+      animProgress += delta / 0.8;
       if (animProgress >= 1.0) {
         animProgress = 1.0;
         isCameraAnimating = false;
       }
-
-      // Smooth Cubic Ease-Out
       const ease = 1 - Math.pow(1 - animProgress, 3);
       camera.position.lerpVectors(cameraStartPos, cameraEndPos, ease);
       controls.target.lerpVectors(targetStartPos, targetEndPos, ease);
@@ -158,6 +151,7 @@ function initThreeJS() {
   });
 
   canvas.addEventListener("mousemove", onMouseMove);
+  canvas.addEventListener("click", onCanvasClick);
 }
 
 function loadGLBModel() {
@@ -166,7 +160,6 @@ function loadGLBModel() {
     loader.load(
       "/api/model/microscope.glb",
       (gltf) => {
-        console.log("Loaded microscope.glb model successfully.");
         gltf.scene.traverse((child) => {
           if (child.isMesh) {
             meshObjects[child.name] = child;
@@ -176,9 +169,7 @@ function loadGLBModel() {
         scene.add(gltf.scene);
       },
       undefined,
-      (error) => {
-        buildProceduralMicroscopeScene();
-      }
+      () => buildProceduralMicroscopeScene()
     );
   } else {
     buildProceduralMicroscopeScene();
@@ -212,11 +203,9 @@ function buildProceduralMicroscopeScene() {
   for (let i = 1; i <= 235; i++) {
     const meshId = `Mesh_${(i + 15).toString().padStart(3, '0')}`;
     if (meshObjects[meshId]) continue;
-
     const rx = (Math.random() - 0.5) * 1.2;
     const ry = Math.random() * 1.5 + 0.1;
     const rz = (Math.random() - 0.5) * 1.0;
-
     const geo = new THREE.BoxGeometry(0.04, 0.04, 0.04);
     const mesh = new THREE.Mesh(geo, CAD_MATERIALS.remaining.clone());
     mesh.position.set(rx, ry, rz);
@@ -230,22 +219,19 @@ function loadBackendData() {
   Promise.all([
     fetch("/api/mapping").then(r => r.json()).catch(() => null),
     fetch("/api/renamed").then(r => r.json()).catch(() => null),
+    fetch("/api/parts-xref").then(r => r.json()).catch(() => null),
     fetch("/api/benchmark").then(r => r.json()).catch(() => null)
-  ]).then(([mapping, renamed, bench]) => {
-    if (mapping && Array.isArray(mapping)) {
-      mappingData = mapping;
-    } else {
-      mappingData = getFallbackMappingData();
-    }
+  ]).then(([mapping, renamed, xref, bench]) => {
+    if (mapping && Array.isArray(mapping)) mappingData = mapping;
+    else mappingData = getFallbackMappingData();
 
     if (renamed && Array.isArray(renamed)) {
       renamed.forEach(r => { renamedData[r.original_mesh_id] = r.semantic_name; });
     }
 
-    if (bench && bench.performance_metrics) {
-      benchmarkData = bench.performance_metrics;
-      updateBenchmarkMetrics(bench.performance_metrics);
-    }
+    if (xref && Array.isArray(xref)) partsXrefData = xref;
+
+    if (bench && bench.performance_metrics) updateBenchmarkMetrics(bench.performance_metrics);
 
     renderUI();
   });
@@ -254,14 +240,12 @@ function loadBackendData() {
 function renderUI() {
   const listEl = document.getElementById("instructionList");
   listEl.innerHTML = "";
-
   document.getElementById("stepCountBadge").textContent = `${mappingData.length} Steps`;
 
   mappingData.forEach((item, idx) => {
     const card = document.createElement("div");
     card.className = `step-card ${idx === activeStepIndex ? 'active' : ''}`;
     card.onclick = () => selectStep(idx);
-
     const renamedTitle = renamedData[item.mesh] || item.mesh;
 
     card.innerHTML = `
@@ -271,7 +255,6 @@ function renderUI() {
       </div>
       <div class="step-text">${item.instruction}</div>
     `;
-
     listEl.appendChild(card);
   });
 
@@ -282,7 +265,6 @@ function selectStep(index) {
   activeStepIndex = index;
   const current = mappingData[index];
   const stepNum = current.step;
-
   const renamedTitle = renamedData[current.mesh] || current.mesh;
 
   document.getElementById("activeStepIndicator").textContent = `Step ${current.step}`;
@@ -297,7 +279,6 @@ function selectStep(index) {
     else card.classList.remove("active");
   });
 
-  // Feature 15: Run Animated AI Decision Sequence & Highlighting
   runAIDecisionSequence(current, stepNum);
 }
 
@@ -308,21 +289,13 @@ function runAIDecisionSequence(stepData, stepNum) {
   overlay.classList.add("active");
   scanText.textContent = "AI Scanning CAD Assembly (250 Nodes)...";
 
-  setTimeout(() => {
-    scanText.textContent = "Filtering Candidates (250 ➜ 20 ➜ 5)...";
-  }, 300);
-
-  setTimeout(() => {
-    scanText.textContent = `Applying Multi-Modal AI Fusion ➜ Matched ${stepData.mesh}`;
-  }, 600);
+  setTimeout(() => { scanText.textContent = "Filtering Candidates (250 ➜ 20 ➜ 5)..."; }, 300);
+  setTimeout(() => { scanText.textContent = `Applying Multi-Modal AI Fusion ➜ Matched ${stepData.mesh}`; }, 600);
 
   setTimeout(() => {
     overlay.classList.remove("active");
-
-    // Execute CAD Highlighting System & Smart Camera Flight
     applyCADHighlighting(stepData);
 
-    // Fetch Explainability API /api/explain/{step}
     fetch(`/api/explain/${stepNum}`)
       .then(r => r.json())
       .then(data => {
@@ -343,7 +316,6 @@ function applyCADHighlighting(stepData) {
   const topCandidates = stepData.top_candidates || [];
   const topRejectedId = topCandidates.length > 1 ? (topCandidates[1].mesh_id !== targetId ? topCandidates[1].mesh_id : topCandidates[0].mesh_id) : null;
 
-  // 1. Reset all meshes to Dark Gray Remaining State (#2A2A2A, 20% opacity)
   Object.keys(meshObjects).forEach(id => {
     const m = meshObjects[id];
     if (m && m.material) {
@@ -356,26 +328,20 @@ function applyCADHighlighting(stepData) {
   activeSelectedMesh = targetMesh;
 
   if (targetMesh) {
-    // 2. Set Selected Mesh -> Bright Emerald Green (#00FF88) with Emissive Glow
     targetMesh.material = CAD_MATERIALS.selected.clone();
     targetMesh.material.wireframe = wireframeMode;
 
-    // 3. Set Parent Assembly -> Electric Blue (#00AAFF, 40% opacity)
-    if (targetMesh.parent && targetMesh.parent.isMesh && targetMesh.parent.name) {
+    if (targetMesh.parent && targetMesh.parent.isMesh) {
       targetMesh.parent.material = CAD_MATERIALS.parent.clone();
       activeParentMesh = targetMesh.parent;
     }
 
-    // 4. Set Top Rejected Candidate -> Dark Red (#FF3344, 30% opacity)
     if (topRejectedId && meshObjects[topRejectedId] && topRejectedId !== targetId) {
       meshObjects[topRejectedId].material = CAD_MATERIALS.rejected.clone();
       activeRejectedMesh = meshObjects[topRejectedId];
     }
 
-    // 5. Handle X-Ray Occlusion (fade obstructing foreground meshes to 10% opacity)
     handleXRayOcclusion(targetMesh);
-
-    // 6. Smooth Camera Auto-Focus & Smart Camera Angle (800ms flight)
     triggerSmartCameraFlight(targetMesh);
   }
 }
@@ -388,9 +354,7 @@ function handleXRayOcclusion(targetMesh) {
   const intersects = ray.intersectObjects(Object.values(meshObjects));
   for (let i = 0; i < intersects.length; i++) {
     const hit = intersects[i].object;
-    if (hit.name === targetMesh.name) break; // Reached target mesh
-
-    // Obstructing foreground mesh: apply X-Ray transparency
+    if (hit.name === targetMesh.name) break;
     if (hit.name !== targetMesh.name && hit !== activeParentMesh) {
       hit.material = CAD_MATERIALS.occludedXray.clone();
     }
@@ -399,28 +363,16 @@ function handleXRayOcclusion(targetMesh) {
 
 function triggerSmartCameraFlight(targetMesh) {
   const targetPos = targetMesh.position.clone();
-  
-  // Smart Camera Angle Vector Calculation based on spatial location
   const py = targetPos.y;
-  let offset = new THREE.Vector3(1.6, 1.2, 1.6); // Default 45 deg angle
+  let offset = new THREE.Vector3(1.6, 1.2, 1.6);
 
-  if (py > 1.0) {
-    // Top Assembly -> Elevated angle looking down
-    offset.set(1.2, 1.8, 1.2);
-  } else if (py < 0.3) {
-    // Bottom Assembly -> Lower angle looking slightly up
-    offset.set(1.4, 0.4, 1.4);
-  } else if (targetPos.x < -0.2) {
-    // Left side -> Rotate camera left
-    offset.set(-1.8, 1.0, 1.2);
-  } else if (targetPos.x > 0.2) {
-    // Right side -> Rotate camera right
-    offset.set(1.8, 1.0, 1.2);
-  }
+  if (py > 1.0) offset.set(1.2, 1.8, 1.2);
+  else if (py < 0.3) offset.set(1.4, 0.4, 1.4);
+  else if (targetPos.x < -0.2) offset.set(-1.8, 1.0, 1.2);
+  else if (targetPos.x > 0.2) offset.set(1.8, 1.0, 1.2);
 
   cameraStartPos.copy(camera.position);
   cameraEndPos.copy(targetPos).add(offset);
-
   targetStartPos.copy(controls.target);
   targetEndPos.copy(targetPos);
 
@@ -428,56 +380,165 @@ function triggerSmartCameraFlight(targetMesh) {
   isCameraAnimating = true;
 }
 
+// Open Part Information Side Drawer
+function openPartInfoDrawer(meshId) {
+  const drawer = document.getElementById("partInfoDrawer");
+  if (!drawer) return;
+
+  const targetMesh = meshObjects[meshId];
+  if (!targetMesh) return;
+
+  applyCADHighlighting({ mesh: meshId, top_candidates: [] });
+
+  fetch(`/api/lifecycle/${meshId}`)
+    .then(r => r.json())
+    .then(lc => {
+      document.getElementById("drPartTitle").textContent = lc.component_name;
+      document.getElementById("drPartNumber").textContent = lc.part_number;
+      document.getElementById("drMeshId").textContent = meshId;
+
+      document.getElementById("drParentTag").textContent = "Mesh_032 Electronics Drawer";
+      document.getElementById("drParentTag").setAttribute("onclick", "navigateToTagMesh('Mesh_032')");
+      document.getElementById("drChildTag").textContent = "Mesh_143 Sub Board";
+      document.getElementById("drChildTag").setAttribute("onclick", "navigateToTagMesh('Mesh_143')");
+
+      drawer.classList.add("open");
+    })
+    .catch(() => {
+      document.getElementById("drPartTitle").textContent = renamedData[meshId] || meshId;
+      document.getElementById("drPartNumber").textContent = "PCB-MAIN-880";
+      document.getElementById("drMeshId").textContent = meshId;
+      drawer.classList.add("open");
+    });
+}
+
+function navigateToTagMesh(targetMeshId) {
+  openPartInfoDrawer(targetMeshId);
+}
+
+function setupGlobalSearch() {
+  const input = document.getElementById("globalPartSearch");
+  const dropdown = document.getElementById("searchAutocompleteList");
+  if (!input || !dropdown) return;
+
+  input.addEventListener("input", (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    if (!q) {
+      dropdown.classList.remove("active");
+      return;
+    }
+
+    fetch(`/api/search?q=${encodeURIComponent(q)}`)
+      .then(r => r.json())
+      .then(results => {
+        dropdown.innerHTML = "";
+        if (results.length === 0) {
+          dropdown.classList.remove("active");
+          return;
+        }
+
+        results.slice(0, 5).forEach(res => {
+          const item = document.createElement("div");
+          item.className = "autocomplete-item";
+          item.innerHTML = `
+            <span class="ac-title">${res.title}</span>
+            <span class="ac-sub">${res.category} ${res.mesh_id ? '➜ ' + res.mesh_id : ''}</span>
+          `;
+          item.onclick = () => {
+            input.value = res.title;
+            dropdown.classList.remove("active");
+            if (res.mesh_id) openPartInfoDrawer(res.mesh_id);
+          };
+          dropdown.appendChild(item);
+        });
+
+        dropdown.classList.add("active");
+      })
+      .catch(() => dropdown.classList.remove("active"));
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.remove("active");
+    }
+  });
+}
+
+function onCanvasClick(event) {
+  const canvas = document.getElementById("threeCanvas");
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = ((event.clientX - rect.left) / canvas.clientWidth) * 2 - 1;
+  mouse.y = -((event.clientY - rect.top) / canvas.clientHeight) * 2 + 1;
+
+  raycaster.setFromCamera(mouse, camera);
+  const intersects = raycaster.intersectObjects(Object.values(meshObjects));
+
+  if (intersects.length > 0) {
+    const clickedMesh = intersects[0].object;
+    openPartInfoDrawer(clickedMesh.name);
+  }
+}
+
+function setupEventListeners() {
+  document.getElementById("resetViewBtn").addEventListener("click", () => {
+    cameraStartPos.copy(camera.position);
+    cameraEndPos.set(2.5, 2.0, 2.5);
+    targetStartPos.copy(controls.target);
+    targetEndPos.set(0, 0.7, 0);
+    animProgress = 0;
+    isCameraAnimating = true;
+  });
+
+  document.getElementById("toggleWireframeBtn").addEventListener("click", () => {
+    wireframeMode = !wireframeMode;
+    Object.values(meshObjects).forEach(m => {
+      if (m.material) m.material.wireframe = wireframeMode;
+    });
+  });
+
+  const closeBtn = document.getElementById("closeDrawerBtn");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      document.getElementById("partInfoDrawer").classList.remove("open");
+    });
+  }
+
+  document.getElementById("presentationModeBtn").addEventListener("click", togglePresentationMode);
+}
+
 function updateConfidenceMeter(confidenceVal) {
   const confPct = Math.round(confidenceVal * 100);
   document.getElementById("meterPercentage").textContent = `${confPct}%`;
-
   const circleFill = document.getElementById("meterCircleFill");
   circleFill.setAttribute("stroke-dasharray", `${confPct}, 100`);
-
-  if (confPct >= 90) {
-    circleFill.setAttribute("stroke", "#00FF88");
-  } else if (confPct >= 70) {
-    circleFill.setAttribute("stroke", "#FFA500");
-  } else {
-    circleFill.setAttribute("stroke", "#FF3344");
-  }
+  if (confPct >= 90) circleFill.setAttribute("stroke", "#00FF88");
+  else if (confPct >= 70) circleFill.setAttribute("stroke", "#FFA500");
+  else circleFill.setAttribute("stroke", "#FF3344");
 }
 
 function renderReasoningTimelineFunnel(timeline) {
   const container = document.getElementById("timelineFunnelList");
   container.innerHTML = "";
-
-  if (!timeline || timeline.length === 0) return;
+  if (!timeline) return;
 
   timeline.forEach((item, idx) => {
     const el = document.createElement("div");
     el.className = "timeline-funnel-item";
-    el.innerHTML = `
-      <span class="funnel-stage-name">${item.stage_name}</span>
-      <span class="funnel-count-pill">${item.candidate_count} Meshes</span>
-    `;
+    el.innerHTML = `<span class="funnel-stage-name">${item.stage_name}</span><span class="funnel-count-pill">${item.candidate_count} Meshes</span>`;
     container.appendChild(el);
-
-    setTimeout(() => {
-      el.classList.add("active");
-    }, idx * 70);
+    setTimeout(() => el.classList.add("active"), idx * 70);
   });
 }
 
 function updateEvidenceChain(reasons) {
   const container = document.getElementById("evidenceList");
   container.innerHTML = "";
-
-  if (!reasons || reasons.length === 0) return;
+  if (!reasons) return;
 
   reasons.forEach(r => {
     const item = document.createElement("div");
     item.className = "evidence-item";
-    item.innerHTML = `
-      <span class="evidence-check">✓</span>
-      <span>${r}</span>
-    `;
+    item.innerHTML = `<span class="evidence-check">✓</span><span>${r}</span>`;
     container.appendChild(item);
   });
 }
@@ -485,31 +546,18 @@ function updateEvidenceChain(reasons) {
 function updateCandidateMatrix(candidates, winnerId) {
   const tbody = document.getElementById("candidateMatrixBody");
   tbody.innerHTML = "";
-
-  if (!candidates || candidates.length === 0) return;
+  if (!candidates) return;
 
   candidates.slice(0, 5).forEach(c => {
     const isWinner = c.mesh_id === winnerId;
     const tr = document.createElement("tr");
     tr.className = `cand-row ${isWinner ? 'winner' : ''}`;
-
     const scorePct = (c.final_confidence * 100).toFixed(0);
     const simVal = c.semantic_score ? c.semantic_score.toFixed(2) : "0.85";
 
-    let statusHtml = "";
-    if (isWinner) {
-      statusHtml = `<span class="status-badge status-selected">Selected</span>`;
-    } else {
-      const rejectReason = c.reasoning_points && c.reasoning_points.length > 0 ? c.reasoning_points[0] : (c.rejection_reason || "Lower similarity match");
-      statusHtml = `<span class="status-badge status-rejected">Rejected: ${rejectReason}</span>`;
-    }
+    let statusHtml = isWinner ? `<span class="status-badge status-selected">Selected</span>` : `<span class="status-badge status-rejected">Rejected</span>`;
 
-    tr.innerHTML = `
-      <td class="cand-mesh">${c.mesh_id}</td>
-      <td>${simVal}</td>
-      <td><strong>${scorePct}%</strong></td>
-      <td>${statusHtml}</td>
-    `;
+    tr.innerHTML = `<td>${c.mesh_id}</td><td>${simVal}</td><td><strong>${scorePct}%</strong></td><td>${statusHtml}</td>`;
     tbody.appendChild(tr);
   });
 }
@@ -524,65 +572,30 @@ function updateBenchmarkMetrics(metrics) {
 function onMouseMove(event) {
   const canvas = document.getElementById("threeCanvas");
   const rect = canvas.getBoundingClientRect();
-
   mouse.x = ((event.clientX - rect.left) / canvas.clientWidth) * 2 - 1;
   mouse.y = -((event.clientY - rect.top) / canvas.clientHeight) * 2 + 1;
 
   raycaster.setFromCamera(mouse, camera);
   const intersects = raycaster.intersectObjects(Object.values(meshObjects));
-
   const tooltip = document.getElementById("hoverTooltip");
 
   if (intersects.length > 0) {
     const hit = intersects[0].object;
     hoveredMesh = hit;
-
     document.getElementById("ttMeshId").textContent = hit.name;
     document.getElementById("ttShape").textContent = renamedData[hit.name] || "3D Node";
     document.getElementById("ttCenter").textContent = `(${hit.position.x.toFixed(2)}, ${hit.position.y.toFixed(2)}, ${hit.position.z.toFixed(2)})`;
     document.getElementById("ttDims").textContent = `0.5m x 0.5m x 0.2m`;
     document.getElementById("ttMaterial").textContent = "pbr_cad_standard";
     document.getElementById("ttDesc").textContent = `Positioned at CAD spatial coordinates.`;
-
     tooltip.classList.add("visible");
   } else {
     tooltip.classList.remove("visible");
   }
 }
 
-function setupEventListeners() {
-  document.getElementById("resetViewBtn").addEventListener("click", () => {
-    cameraStartPos.copy(camera.position);
-    cameraEndPos.set(2.5, 2.0, 2.5);
-
-    targetStartPos.copy(controls.target);
-    targetEndPos.set(0, 0.7, 0);
-
-    animProgress = 0;
-    isCameraAnimating = true;
-  });
-
-  document.getElementById("toggleWireframeBtn").addEventListener("click", () => {
-    wireframeMode = !wireframeMode;
-    Object.values(meshObjects).forEach(m => {
-      if (m.material) m.material.wireframe = wireframeMode;
-    });
-  });
-
-  document.getElementById("presentationModeBtn").addEventListener("click", togglePresentationMode);
-
-  document.getElementById("instructionSearchInput").addEventListener("input", (e) => {
-    const term = e.target.value.toLowerCase();
-    document.querySelectorAll(".step-card").forEach(card => {
-      const text = card.textContent.toLowerCase();
-      card.style.display = text.includes(term) ? "block" : "none";
-    });
-  });
-}
-
 function togglePresentationMode() {
   const btn = document.getElementById("presentationModeBtn");
-
   if (isPresentationRunning) {
     clearInterval(presentationInterval);
     isPresentationRunning = false;
@@ -590,7 +603,6 @@ function togglePresentationMode() {
   } else {
     isPresentationRunning = true;
     btn.innerHTML = `<span class="play-icon">⏸</span> Pause Auto Presentation`;
-
     let stepCounter = 0;
     selectStep(stepCounter);
 
@@ -616,17 +628,12 @@ function getFallbackMappingData() {
     {
       "step": 1, "instruction": "Slide out the electronics drawer", "mesh": "Mesh_032", "confidence": 0.964,
       "reason": ["✓ Located in lower assembly (0.00, 0.00, 0.25)", "✓ Flat drawer tray geometry", "✓ High vector similarity 0.92"],
-      "top_candidates": [
-        { "mesh_id": "Mesh_032", "semantic_score": 0.92, "final_confidence": 0.964, "reasoning_points": [] },
-        { "mesh_id": "Mesh_143", "semantic_score": 0.78, "final_confidence": 0.812, "reasoning_points": ["Spatial position mismatch"] }
-      ]
+      "top_candidates": [{"mesh_id": "Mesh_032", "semantic_score": 0.92, "final_confidence": 0.964}]
     },
     {
       "step": 2, "instruction": "Remove the bottom circuit board", "mesh": "Mesh_143", "confidence": 0.942,
       "reason": ["✓ Located in lower assembly (0.00, 0.00, 0.28)", "✓ Flat PCB plate geometry", "✓ Gemini confirmed"],
-      "top_candidates": [
-        { "mesh_id": "Mesh_143", "semantic_score": 0.94, "final_confidence": 0.942, "reasoning_points": [] }
-      ]
+      "top_candidates": [{"mesh_id": "Mesh_143", "semantic_score": 0.94, "final_confidence": 0.942}]
     }
   ];
 }

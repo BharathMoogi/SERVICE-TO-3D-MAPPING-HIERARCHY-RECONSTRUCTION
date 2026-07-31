@@ -1,0 +1,11 @@
+Component_Name,Part_Number,Mesh_ID,Assembly_Name,Manual_Page,Manual_Section,Work_Order_ID
+Electronics Drawer,EL-DRW-900,Mesh_032,Bottom Assembly,3,Section 1.1,WO-7741
+Drawer Bracket,BRK-DRW-241,Mesh_241,Bottom Assembly,3,Section 1.1,WO-7741
+Main Circuit Board,PCB-MAIN-880,Mesh_231,Bottom Assembly,4,Section 1.2,WO-8820
+Sub Circuit Board,PCB-SUB-143,Mesh_143,Bottom Assembly,4,Section 1.2,WO-8820
+Sample Stage,STG-XY-050,Mesh_050,Middle Assembly,6,Section 2.1,WO-9012
+Left Sample Clip,CLP-SMP-104,Mesh_004,Middle Assembly,6,Section 2.1,WO-9012
+Right Sample Clip,CLP-SMP-105,Mesh_088,Middle Assembly,6,Section 2.1,WO-9012
+Mounting Nut M6,NUT-M6-SS,Mesh_112,Middle Assembly,8,Section 2.2,WO-9104
+Objective Lens 40X,LNS-OBJ-40X,Mesh_089,Optical Nosepiece,11,Section 3.1,WO-9350
+Motor Bracket,BRK-MTR-770,Mesh_098,Motor Drive,14,Section 4.1,WO-9510

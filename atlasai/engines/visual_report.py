@@ -245,3 +245,6 @@ class VisualReportGenerator:
 
         logger.info(f"Exported report.html: {path}")
         return path
+
+# Backward compatibility alias
+VisualReportEngine = VisualReportGenerator

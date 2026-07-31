@@ -1,0 +1,25 @@
+[
+  {
+    "bulletin_id": "SB-2026-04",
+    "title": "Circuit Board Standoff Insulator Upgrade",
+    "affected_parts": [
+      "PCB-MAIN-880",
+      "Mesh_231",
+      "Mesh_143"
+    ],
+    "severity": "High",
+    "summary": "Mandatory installation of nylon insulating washers under PCB mounting screws to prevent ground loop interference.",
+    "release_date": "2026-04-10"
+  },
+  {
+    "bulletin_id": "SB-2026-09",
+    "title": "Objective Lens Retaining Ring Inspection",
+    "affected_parts": [
+      "LNS-OBJ-40X",
+      "Mesh_089"
+    ],
+    "severity": "Medium",
+    "summary": "Verify optical turret alignment ring torque during routine optical recalibration.",
+    "release_date": "2026-06-18"
+  }
+]

@@ -31,17 +31,87 @@
         </div>
       </div>
 
-      <div class="header-center-controls">
-        <button class="btn btn-demo" id="presentationModeBtn">
+      <div class="header-controls">
+        <!-- Global Part Navigation Search Bar -->
+        <div class="global-search-container">
+          <input type="text" id="globalPartSearch" placeholder="🔍 Search part, number, or NL query ('Circuit Board', 'WO-7741')..." autocomplete="off">
+          <div class="autocomplete-dropdown" id="searchAutocompleteList"></div>
+        </div>
+
+        <button id="presentationModeBtn" class="btn btn-accent">
           <span class="play-icon">▶</span> Presentation Mode (Auto-Demo)
         </button>
-      </div>
-
-      <div class="header-badges">
-        <span class="badge enterprise">Metadome.ai Platform</span>
-        <span class="badge status"><span class="dot"></span> 250 Meshes Loaded</span>
+        <div class="model-badge">
+          <span class="dot live"></span>
+          <span id="modelMeshCount">Metadome.ai Platform 250 Meshes Loaded</span>
+        </div>
       </div>
     </header>
+
+    <!-- Slide-Out Engineering Part Information Drawer -->
+    <div class="part-info-drawer" id="partInfoDrawer">
+      <div class="drawer-header">
+        <div>
+          <span class="drawer-part-num" id="drPartNumber">PCB-MAIN-880</span>
+          <h2 id="drPartTitle">Main Circuit Board</h2>
+        </div>
+        <button class="drawer-close-btn" id="closeDrawerBtn">✕</button>
+      </div>
+
+      <div class="drawer-body">
+        <div class="drawer-section">
+          <h3>3D CAD Attributes</h3>
+          <div class="drawer-grid">
+            <div class="dr-item"><span class="dr-lbl">Mesh ID</span><span class="dr-val highlight" id="drMeshId">Mesh_231</span></div>
+            <div class="dr-item"><span class="dr-lbl">Assembly</span><span class="dr-val" id="drAssembly">Bottom Assembly</span></div>
+            <div class="dr-item"><span class="dr-lbl">Dimensions</span><span class="dr-val" id="drDims">0.8m x 0.6m x 0.02m</span></div>
+            <div class="dr-item"><span class="dr-lbl">Material</span><span class="dr-val" id="drMaterial">pbr_cad_standard</span></div>
+          </div>
+        </div>
+
+        <div class="drawer-section">
+          <h3>Hierarchy Navigation</h3>
+          <div class="hierarchy-tags">
+            <div><span class="tag-label">Parent Component:</span> <span class="entity-tag parent-tag" id="drParentTag" onclick="navigateToTagMesh('Mesh_032')">Mesh_032 Electronics Drawer</span></div>
+            <div style="margin-top: 6px;"><span class="tag-label">Child Components:</span> <span class="entity-tag child-tag" id="drChildTag" onclick="navigateToTagMesh('Mesh_143')">Mesh_143 Sub Board</span></div>
+          </div>
+        </div>
+
+        <div class="drawer-section">
+          <h3>Engineering Documentation</h3>
+          <div class="doc-link-box" id="drDocBox">
+            <div class="doc-link-item">📖 <strong>Section 1.2</strong>: Main System Circuit Board (Page 4)</div>
+            <div class="doc-warn-item">⚠️ <strong>Warning</strong>: Wear anti-static ESD wrist strap during handling</div>
+            <div class="doc-spec-item">🔧 <strong>Torque Spec</strong>: 1.2 Nm for PCB standoff screws</div>
+          </div>
+        </div>
+
+        <div class="drawer-section">
+          <h3>Maintenance & Work Orders</h3>
+          <div class="wo-box" id="drWoBox">
+            <div class="wo-item"><span class="wo-badge open">OPEN</span> <strong>WO-8820</strong>: FPGA power rail voltage fluctuation</div>
+            <div class="wo-item"><span class="wo-badge closed">CLOSED</span> <strong>WO-7741</strong>: Guide rail binding resolved</div>
+          </div>
+        </div>
+
+        <div class="drawer-section">
+          <h3>Health & Inspection Status</h3>
+          <div class="health-box">
+            <span class="health-status-badge warning" id="drHealthStatus">⚠️ Warning (82% Health)</span>
+            <p id="drHealthFindings">Thermal discoloration detected on power MOSFET Q3 during INSP-2026-01.</p>
+          </div>
+        </div>
+
+        <div class="drawer-section">
+          <h3>AI Decision Evidence</h3>
+          <div class="ai-rationale-box" id="drAiRationale">
+            ✓ Spatial Location: Centroid at (0.00, 0.00, 0.10) inside Bottom Assembly.<br>
+            ✓ Vector Similarity: 0.94 cosine match.<br>
+            ✓ Gemini LLM Verification: Confirmed primary PCB plate.
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Workspace -->
     <main class="workspace">

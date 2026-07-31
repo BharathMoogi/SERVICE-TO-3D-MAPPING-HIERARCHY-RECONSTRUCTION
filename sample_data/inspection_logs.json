@@ -1,0 +1,20 @@
+[
+  {
+    "log_id": "INSP-2026-01",
+    "mesh_id": "Mesh_231",
+    "part_number": "PCB-MAIN-880",
+    "inspection_date": "2026-07-15",
+    "health_score": 0.82,
+    "findings": "Minor thermal discoloration on Q3 power MOSFET. Recommended replacement.",
+    "status": "Warning"
+  },
+  {
+    "log_id": "INSP-2026-02",
+    "mesh_id": "Mesh_112",
+    "part_number": "NUT-M6-SS",
+    "inspection_date": "2026-06-01",
+    "health_score": 0.98,
+    "findings": "Torque verified at 6.0 Nm. Zero corrosion detected.",
+    "status": "Pass"
+  }
+]

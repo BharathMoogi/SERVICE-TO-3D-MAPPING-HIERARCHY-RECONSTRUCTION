@@ -128,3 +128,14 @@ class InstructionIntelligenceEngine:
 
         logger.info(f"Instruction Intelligence Engine parsed {len(parsed_steps)} service instructions.")
         return parsed_steps
+
+    def load_and_parse_steps(self, json_path: Any) -> List[ParsedInstruction]:
+        """Loads steps.json from path and parses instructions."""
+        import json
+        from pathlib import Path
+        path = Path(json_path)
+        if not path.exists():
+            return []
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return self.parse_steps_list(data)
