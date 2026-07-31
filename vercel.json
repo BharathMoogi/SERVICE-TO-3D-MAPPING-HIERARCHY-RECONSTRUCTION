@@ -1,9 +1,7 @@
 {
   "version": 2,
+  "outputDirectory": "public",
   "rewrites": [
-    { "source": "/car.html", "destination": "/public/car.html" },
-    { "source": "/car.css",  "destination": "/public/car.css"  },
-    { "source": "/car.js",   "destination": "/public/car.js"   },
-    { "source": "/api/:path*", "destination": "/api/index.py"  }
+    { "source": "/api/:path*", "destination": "/api/index.py" }
   ]
 }
