@@ -389,10 +389,107 @@ function buildCar() {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// REMOVED PARTS STATE & ACTION HANDLERS
+// ═══════════════════════════════════════════════════════════════
+var removedParts = {};
+
+function toggleRemovePart(id) {
+  if (!id || !meshMap[id]) return;
+  var p = DB[id];
+  if (removedParts[id]) {
+    delete removedParts[id];
+    meshMap[id].visible = true;
+    updateRemoveBtnUI(id);
+    updatePartsListRemovedState();
+    updateRemovedCount();
+    highlightPart(id);
+    showToast('🔩 Reinstalled: ' + (p ? p.n : id), 'Component returned to 3D vehicle assembly');
+  } else {
+    removedParts[id] = true;
+    meshMap[id].visible = false;
+    updateRemoveBtnUI(id);
+    updatePartsListRemovedState();
+    updateRemovedCount();
+    showToast('🛠️ Disassembled: ' + (p ? p.n : id), 'Part removed from 3D model');
+  }
+}
+
+function isolatePart(id) {
+  if (!id || !meshMap[id]) return;
+  var p = DB[id];
+  Object.keys(meshMap).forEach(function(k) {
+    if (k === id) {
+      meshMap[k].visible = true;
+    } else {
+      meshMap[k].visible = false;
+    }
+  });
+  flyTo(id);
+  showToast('🔍 Isolated View: ' + (p ? p.n : id), 'Showing only selected component');
+}
+
+function reassembleAll() {
+  var prevCount = Object.keys(removedParts).length;
+  removedParts = {};
+  Object.keys(meshMap).forEach(function(k) {
+    meshMap[k].visible = true;
+  });
+  resetHighlight();
+  if (selectedId) highlightPart(selectedId);
+  updateRemoveBtnUI(selectedId);
+  updatePartsListRemovedState();
+  updateRemovedCount();
+  showToast('✨ Vehicle Reassembled', 'All 85 components restored to 3D model');
+}
+
+function updateRemoveBtnUI(id) {
+  var btn = document.getElementById('piBtnRemove');
+  var ico = document.getElementById('piBtnRemoveIco');
+  var txt = document.getElementById('piBtnRemoveTxt');
+  if (!btn || !id) return;
+
+  if (removedParts[id]) {
+    btn.className = 'pi-act-btn reinstall';
+    ico.textContent = '🔄';
+    txt.textContent = 'Reinstall Part';
+  } else {
+    btn.className = 'pi-act-btn remove';
+    ico.textContent = '🛠️';
+    txt.textContent = 'Remove Part';
+  }
+}
+
+function updatePartsListRemovedState() {
+  document.querySelectorAll('.part-item').forEach(function(el) {
+    var id = el.dataset.id;
+    el.classList.toggle('is-removed', !!removedParts[id]);
+  });
+}
+
+function updateRemovedCount() {
+  var cnt = Object.keys(removedParts).length;
+  var el = document.getElementById('vRemovedCount');
+  if (el) el.textContent = cnt;
+}
+
+function getVisibleMeshes() {
+  return Object.keys(meshMap).filter(function(k) {
+    return meshMap[k].visible && !removedParts[k];
+  }).map(function(k) {
+    return meshMap[k];
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
 // HIGHLIGHT
 // ═══════════════════════════════════════════════════════════════
 function highlightPart(id) {
   Object.keys(meshMap).forEach(function(k) {
+    if (removedParts[k]) {
+      meshMap[k].visible = false;
+      return;
+    }
+    meshMap[k].visible = true;
     var mat = meshMap[k].material;
     if (k === id) {
       mat.color.setHex(0xFFCC00);
@@ -410,6 +507,11 @@ function highlightPart(id) {
 
 function resetHighlight() {
   Object.keys(meshMap).forEach(function(k) {
+    if (removedParts[k]) {
+      meshMap[k].visible = false;
+      return;
+    }
+    meshMap[k].visible = true;
     var mat = meshMap[k].material;
     mat.color.setHex(origColors[k] || 0x888888);
     mat.emissive && mat.emissive.setHex(0x000000);
@@ -502,6 +604,7 @@ function selectPart(id, conf) {
   });
 
   showPartInfo(id, p, conf);
+  updateRemoveBtnUI(id);
   document.getElementById('panelR').classList.remove('hidden');
   document.getElementById('sbSel').textContent = p.n;
   showToast(p.ico + ' ' + p.n, 'Confidence: ' + Math.round(conf*100) + '%');
@@ -668,7 +771,7 @@ document.getElementById('car-canvas').addEventListener('mousemove', function(e){
   mouse2.x =  (e.clientX / window.innerWidth)  * 2 - 1;
   mouse2.y = -(e.clientY / window.innerHeight) * 2 + 1;
   raycaster.setFromCamera(mouse2, camera);
-  var hits = raycaster.intersectObjects(Object.values(meshMap));
+  var hits = raycaster.intersectObjects(getVisibleMeshes());
   if (hits.length) {
     var hid = hits[0].object.name;
     var hp = DB[hid];
@@ -684,14 +787,26 @@ document.getElementById('car-canvas').addEventListener('mousemove', function(e){
 });
 document.getElementById('car-canvas').addEventListener('click', function(){
   raycaster.setFromCamera(mouse2, camera);
-  var hits = raycaster.intersectObjects(Object.values(meshMap));
+  var hits = raycaster.intersectObjects(getVisibleMeshes());
   if (hits.length && DB[hits[0].object.name]) selectPart(hits[0].object.name);
   else deselectPart();
 });
 
 // ═══════════════════════════════════════════════════════════════
-// VIEWER CONTROLS
+// PART ACTIONS & VIEWER CONTROLS
 // ═══════════════════════════════════════════════════════════════
+document.getElementById('piBtnRemove').addEventListener('click', function() {
+  if (selectedId) toggleRemovePart(selectedId);
+});
+
+document.getElementById('piBtnIsolate').addEventListener('click', function() {
+  if (selectedId) isolatePart(selectedId);
+});
+
+document.getElementById('vReassemble').addEventListener('click', function() {
+  reassembleAll();
+});
+
 document.getElementById('vReset').addEventListener('click', function(){ resetCamera(); resetHighlight(); deselectPart(); });
 
 document.getElementById('vWire').addEventListener('click', function(){
@@ -850,5 +965,9 @@ window.addEventListener('DOMContentLoaded', function() {
   } catch(e1) { console.error('initScene error:', e1); }
 });
 
-// Global helper for inline onclick
+// Global helpers for inline onclick
 window.selectPart = selectPart;
+window.toggleRemovePart = toggleRemovePart;
+window.isolatePart = isolatePart;
+window.reassembleAll = reassembleAll;
+

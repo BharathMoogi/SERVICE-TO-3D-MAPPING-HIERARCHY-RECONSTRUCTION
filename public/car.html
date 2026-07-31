@@ -92,6 +92,16 @@
         <div class="conf-bar"><div class="conf-fill" id="piConf" style="width:0%"></div></div>
         <span class="conf-pct" id="piConfPct">0%</span>
       </div>
+
+      <!-- Quick Action Buttons: Remove/Reinstall & Isolate -->
+      <div class="pi-act-row">
+        <button class="pi-act-btn remove" id="piBtnRemove" title="Disassemble / Remove this part from the 3D car model">
+          <span id="piBtnRemoveIco">🛠️</span> <span id="piBtnRemoveTxt">Remove Part</span>
+        </button>
+        <button class="pi-act-btn isolate" id="piBtnIsolate" title="Isolate view to show only this component">
+          🔍 Isolate View
+        </button>
+      </div>
     </div>
 
     <div class="pi-tabs">
@@ -144,6 +154,7 @@
   <button class="v-btn" id="vWire">▦ Wire</button>
   <button class="v-btn" id="vXray">◈ X-Ray</button>
   <button class="v-btn" id="vExplode">⊕ Explode</button>
+  <button class="v-btn" id="vReassemble">🛠️ Reassemble All (<span id="vRemovedCount">0</span>)</button>
 </div>
 
 <!-- CAD Legend -->
@@ -151,7 +162,7 @@
   <div class="leg-item"><div class="leg-dot" style="background:#C9A84C;box-shadow:0 0 5px #C9A84C"></div>Selected Part</div>
   <div class="leg-item"><div class="leg-dot" style="background:#00B4FF;box-shadow:0 0 5px #00B4FF"></div>Parent Assembly</div>
   <div class="leg-item"><div class="leg-dot" style="background:#334155"></div>Remaining Model</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#EF4444"></div>Rejected Candidate</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#EF4444"></div>Removed / Disassembled</div>
 </div>
 
 <!-- Match Toast -->

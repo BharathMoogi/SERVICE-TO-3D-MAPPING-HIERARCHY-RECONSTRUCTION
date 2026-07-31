@@ -444,3 +444,31 @@ html, body { width:100%; height:100%; overflow:hidden; background:var(--bg-deep)
 /* ── ANIMATIONS ─────────────────────────── */
 @keyframes fadeIn { from{opacity:0;transform:translateY(5px)} to{opacity:1;transform:translateY(0)} }
 .anim-in { animation:fadeIn .4s cubic-bezier(.4,0,.2,1) forwards; }
+
+/* ── PART ACTION BUTTONS (REMOVE / ISOLATE) ── */
+.pi-act-row { display:flex; gap:6px; margin-top:10px; }
+.pi-act-btn {
+  flex:1; height:30px; border-radius:6px; font-size:.72rem; font-family:var(--f-body); font-weight:600;
+  display:flex; align-items:center; justify-content:center; gap:5px; cursor:pointer; transition:var(--t-fast);
+  border:1px solid var(--border); background:rgba(255,255,255,0.03); color:var(--text-1);
+}
+.pi-act-btn:hover { border-color:var(--gold-dim); background:var(--gold-glow); color:var(--gold); }
+
+.pi-act-btn.remove { background:rgba(239,68,68,0.12); border-color:rgba(239,68,68,0.3); color:#FCA5A5; }
+.pi-act-btn.remove:hover { background:rgba(239,68,68,0.25); border-color:var(--red); color:#FFF; box-shadow:0 0 12px rgba(239,68,68,0.3); }
+
+.pi-act-btn.reinstall { background:rgba(34,197,94,0.14); border-color:rgba(34,197,94,0.35); color:#86EFAC; }
+.pi-act-btn.reinstall:hover { background:rgba(34,197,94,0.28); border-color:var(--green); color:#FFF; box-shadow:0 0 12px rgba(34,197,94,0.3); }
+
+.pi-act-btn.isolate { background:rgba(0,180,255,0.12); border-color:rgba(0,180,255,0.3); color:#7DD3FC; }
+.pi-act-btn.isolate:hover { background:rgba(0,180,255,0.25); border-color:var(--blue); color:#FFF; box-shadow:0 0 12px rgba(0,180,255,0.3); }
+
+/* Removed item indicator in Left Panel */
+.part-item.is-removed { opacity:0.55; }
+.part-item.is-removed .pi-name { text-decoration:line-through; color:var(--red); }
+.part-item.is-removed::after {
+  content:'OFF'; font-family:var(--f-mono); font-size:.52rem; padding:1px 4px;
+  background:rgba(239,68,68,0.2); border:1px solid rgba(239,68,68,0.4); border-radius:3px;
+  color:var(--red); margin-left:auto; text-decoration:none; display:inline-block; font-weight:700;
+}
+
