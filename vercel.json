@@ -1,13 +1,26 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/api/index.py"
     },
     {
-      "src": "/(.*\\.(js|css|png|jpg|svg|ico|glb|json))",
-      "dest": "/public/$1"
+      "src": "/favicon.ico",
+      "dest": "/public/favicon.ico"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",

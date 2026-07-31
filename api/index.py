@@ -7,7 +7,7 @@ All heavy data pre-baked as fallback JSON responses for Vercel Edge.
 import json
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 
 app = FastAPI(
     title="AtlasAI - Enterprise 3D Digital Twin Copilot API",
@@ -21,6 +21,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+def root():
+    """Root redirect - static files served by Vercel CDN from public/"""
+    return RedirectResponse(url="/index.html", status_code=302)
+
+@app.get("/api")
+def api_root():
+    return JSONResponse(content={"service": "AtlasAI Commercial AI Engineering Copilot v2.0", "status": "ok", "routes": ["/api/mapping", "/api/search", "/api/explain/{step_id}", "/api/lifecycle/{mesh_id}", "/api/copilot/chat", "/api/parts-xref", "/api/benchmark"]})
 
 # ─────────────────────────────────────────
 # PRE-BAKED ENGINEERING KNOWLEDGE BASE
