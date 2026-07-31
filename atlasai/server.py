@@ -19,8 +19,6 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
-from atlasai.pipeline import AtlasPipeline
-
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("AtlasAI.Server")
 
@@ -145,6 +143,7 @@ def get_glb_model():
 @app.post("/api/pipeline/run")
 def trigger_pipeline_run():
     try:
+        from atlasai.pipeline import AtlasPipeline
         glb_file = SAMPLE_DIR / "microscope.glb"
         steps_file = SAMPLE_DIR / "steps.json"
 
@@ -163,9 +162,19 @@ def trigger_pipeline_run():
         logger.error(f"Pipeline run error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.get("/")
+def read_root():
+    index_html = WEB_DIR / "index.html"
+    if index_html.exists():
+        return FileResponse(index_html)
+    return {"message": "AtlasAI Platform API"}
+
 # Mount static web visualizer at root / AFTER all API endpoints
 if WEB_DIR.exists():
-    app.mount("/", StaticFiles(directory=str(WEB_DIR), html=True), name="static_root")
+    try:
+        app.mount("/", StaticFiles(directory=str(WEB_DIR), html=True), name="static_root")
+    except Exception as e:
+        logger.warning(f"StaticFiles mount warning: {e}")
 
 if __name__ == "__main__":
     import uvicorn

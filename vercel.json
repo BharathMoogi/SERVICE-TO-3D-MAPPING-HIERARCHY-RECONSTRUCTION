@@ -7,7 +7,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/api/index.py"
+      "destination": "/web_visualizer/$1"
     }
   ]
 }
