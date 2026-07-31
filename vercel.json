@@ -1,37 +1,9 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/index.py"
-    },
-    {
-      "src": "/car.html",
-      "dest": "/public/car.html"
-    },
-    {
-      "src": "/car.css",
-      "dest": "/public/car.css"
-    },
-    {
-      "src": "/car.js",
-      "dest": "/public/car.js"
-    },
-    {
-      "src": "/styles.css",
-      "dest": "/public/styles.css"
-    },
-    {
-      "src": "/app.js",
-      "dest": "/public/app.js"
-    },
-    {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|glb|gltf))",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/public/index.html"
-    }
+  "rewrites": [
+    { "source": "/car.html", "destination": "/public/car.html" },
+    { "source": "/car.css",  "destination": "/public/car.css"  },
+    { "source": "/car.js",   "destination": "/public/car.js"   },
+    { "source": "/api/:path*", "destination": "/api/index.py"  }
   ]
 }
